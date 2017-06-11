@@ -1,0 +1,91 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+#Ignore the automatically generated files
+.lastHash
+**/plugin-routes.ts
+**/plugin-root-services.ts
+**/plugin-root-modules.ts
+**/plugin-home-links.ts
+**/plugin-title-bar-links.ts
+**/peek_plugin_*
+**/build-ns/app/app/
+**/build-web/src/app/
+
+# Ignore the CSS files that we have SCSS files for
+# NativeScript
+app.ios.css
+app.android.css
+app.css
+_app-common.css
+
+# HTML
+**/build-web/src/styles.css
+
+
+# Ignore python compiled files
+*.pyc
+__pycache__
+
+# Nativescript stuff
+npm-debug.log
+.DS_Store
+
+peek_desktop/build-ns/app/**/*.js
+peek_desktop/build-ns/app/**/*.js.map
+peek_desktop/build-web/src/**/*.js
+peek_desktop/build-web/src/**/*.js.map
+peek_desktop/src/**/*.js
+peek_desktop/src/*.js.map
+hooks
+lib/
+node_modules/
+platforms
+tmp/
+typings/
+**/out-tsc
+
+# Ignore pycharm project settings
+.idea
+
+dist/
+build/
+*.egg-info/
+
+# compiled output
+dist
+/tmp
+
+# Ignore compiled python files
+__pycache__/
+
+# dependencies
+node_modules
+/bower_components
+
+# IDEs and editors
+/.vscode
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
+.idea
+
+MANIFEST
