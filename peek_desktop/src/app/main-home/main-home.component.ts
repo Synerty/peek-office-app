@@ -3,13 +3,13 @@ import {
     ComponentLifecycleEventEmitter,
     TupleDataOfflineObserverService
 } from "@synerty/vortexjs";
-import {TitleService} from "@synerty/peek-mobile-util";
+import {TitleService} from "@synerty/peek-util";
 import {homeLinks} from "../../plugin-home-links";
 
 
 @Component({
     selector: "peek-main-home",
-    templateUrl: 'main-home.component.web.html',
+    templateUrl: 'main-home.component.dweb.html',
     moduleId: module.id
 })
 export class MainHomeComponent extends ComponentLifecycleEventEmitter implements OnInit {

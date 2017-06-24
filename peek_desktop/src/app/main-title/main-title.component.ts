@@ -1,12 +1,12 @@
 import {OnInit, OnDestroy} from "@angular/core";
 import {ActivatedRoute} from "@angular/router";
 import {Component} from "@angular/core";
-import {TitleService, TitleBarLink} from "@synerty/peek-mobile-util";
+import {TitleService, TitleBarLink} from "@synerty/peek-util";
 import {VortexStatusService} from "@synerty/vortexjs";
 
 @Component({
     selector: "peek-main-title",
-    templateUrl: "main-title.component.web.html",
+    templateUrl: "main-title.component.dweb.html",
     moduleId: module.id
 })
 export class MainTitleComponent implements OnInit, OnDestroy {
@@ -17,6 +17,7 @@ export class MainTitleComponent implements OnInit, OnDestroy {
     private rightLinks = [];
 
     title: string = "Peek";
+    isEnabled: boolean = true;
     vortexIsOnline:boolean= false;
 
     constructor(vortexStatusService:VortexStatusService, titleService: TitleService) {
@@ -24,13 +25,16 @@ export class MainTitleComponent implements OnInit, OnDestroy {
         this.rightLinks = titleService.rightLinksSnapshot;
 
         this.subscriptions.push(
-            titleService.title.subscribe(title => this.title = title));
+            titleService.title.subscribe(v => this.title = v));
 
         this.subscriptions.push(
-            titleService.leftLinks.subscribe(links => this.leftLinks = links));
+            titleService.isEnabled.subscribe(v => this.isEnabled = v));
 
         this.subscriptions.push(
-            titleService.rightLinks.subscribe(links => this.rightLinks = links));
+            titleService.leftLinks.subscribe(v => this.leftLinks = v));
+
+        this.subscriptions.push(
+            titleService.rightLinks.subscribe(v => this.rightLinks = v));
 
         this.subscriptions.push(
             vortexStatusService.isOnline.subscribe(v => this.vortexIsOnline = v));

@@ -8,6 +8,7 @@
 **/plugin-home-links.ts
 **/plugin-title-bar-links.ts
 **/peek_plugin_*
+**/peek_core_*
 **/build-ns/app/app/
 **/build-web/src/app/
 
