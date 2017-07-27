@@ -9,6 +9,7 @@ import {RouterModule} from "@angular/router";
 import {Ng2BalloonMsgModule} from "@synerty/ng2-balloon-msg/index.web";
 import {PeekModuleFactory} from "@synerty/peek-util/index.web";
 import {
+    TupleActionPushOfflineSingletonService,
     TupleDataObservableNameService,
     TupleDataObserverService,
     TupleDataOfflineObserverService,
@@ -61,6 +62,7 @@ export function tupleOfflineStorageNameServiceFactory() {
     providers: [
         {provide: WebSqlFactoryService, useClass: WebSqlBrowserFactoryService},
         {provide: TupleStorageFactoryService, useClass: TupleStorageFactoryServiceWeb},
+        TupleActionPushOfflineSingletonService,
 
         // Use the TupleDataObserver services, with offline storage
         {
