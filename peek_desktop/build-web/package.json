@@ -21,7 +21,7 @@
     "@angular/platform-browser": "^4.1.3",
     "@angular/platform-browser-dynamic": "^4.1.3",
     "@angular/router": "^4.1.3",
-    "@synerty/ng2-balloon-msg": "^0.2.10",
+    "@synerty/ng2-balloon-msg": "^0.2.11",
     "@synerty/peek-mobile-theme": "0.0.9",
     "@synerty/peek-util": "^0.4.5",
     "@synerty/vortexjs": "^0.9.1",
