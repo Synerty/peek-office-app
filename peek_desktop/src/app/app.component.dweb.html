@@ -1,5 +1,20 @@
 <ng2-balloon-msg></ng2-balloon-msg>
-<peek-main-title></peek-main-title>
-<div class="peek-mobile-page-contents">
-  <router-outlet></router-outlet>
+
+
+
+<div >
+    <!-- Left Menu -->
+    <div >
+        <peek-main-title></peek-main-title>
+        <peek-main-icons></peek-main-icons>
+        <peek-main-footer></peek-main-footer>
+    </div>
+
+    <!-- Right Contents -->
+    <div >
+        <div class="peek-mobile-page-contents">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
 </div>

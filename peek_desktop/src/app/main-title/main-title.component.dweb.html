@@ -3,11 +3,11 @@
     <div  *ngIf="isEnabled"
                class="btn-group pull-left"
          role="group">
-        <button class="title-bar-btn"
-                [routerLink]="['/']">
-            Home
 
+        <button class="footer-bar-btn" (click)="navBackService.navBack()">
+            <fa name="chevron-left" tooltip="Navigate to the last screen"></fa>
         </button>
+
         <button
                 class="title-bar-btn"
                 *ngFor="let link of leftLinks"

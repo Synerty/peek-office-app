@@ -1,0 +1,15 @@
+<div class="peek-footer-bar"
+     [class.bg-danger]="!vortexIsOnline">
+
+    <div class="footer-bar-footer">
+        {{statusText}}
+    </div>
+
+    <br>
+    <div class="pull-right">
+        <button *ngIf="isEnabled" class="footer-bar-btn">
+            <fa name="cog" tooltip="User Configuration"></fa>
+        </button>
+    </div>
+
+</div>

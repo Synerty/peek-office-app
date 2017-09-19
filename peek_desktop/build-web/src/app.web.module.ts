@@ -29,7 +29,9 @@ import {peekRootServices} from "./app/app.services";
 // This app
 import {AppComponent} from "./app/app.component";
 import {MainHomeComponent} from "./app/main-home/main-home.component";
+import {MainIconsComponent} from "./app/main-icons/main-icons.component";
 import {MainTitleComponent} from "./app/main-title/main-title.component";
+import {MainFooterComponent} from "./app/main-footer/main-footer.component";
 import {UnknownRouteComponent} from "./app/unknown-route/unknown-route.component";
 import {pluginRootModules} from "./plugin-root-modules";
 import {pluginRootServices} from "./plugin-root-services";
@@ -47,6 +49,8 @@ export function tupleOfflineStorageNameServiceFactory() {
     declarations: [AppComponent,
         MainTitleComponent,
         MainHomeComponent,
+        MainFooterComponent,
+        MainIconsComponent,
         UnknownRouteComponent],
     bootstrap: [AppComponent],
     imports: [
@@ -72,6 +76,7 @@ export function tupleOfflineStorageNameServiceFactory() {
             provide: TupleOfflineStorageNameService,
             useFactory: tupleOfflineStorageNameServiceFactory
         },
+
         // These have NAME dependencies
         TupleDataObserverService,
         TupleOfflineStorageService,
