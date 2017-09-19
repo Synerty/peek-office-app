@@ -22,8 +22,8 @@
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
         "../node_modules/font-awesome/css/font-awesome.css",
-        "../node_modules/@synerty/peek-mobile-theme/scss/layout.web.scss",
-        "../node_modules/@synerty/peek-mobile-theme/scss/style.web.scss",
+        "../node_modules/@synerty/peek-theme/scss/layout.web.scss",
+        "../node_modules/@synerty/peek-theme/scss/style.web.scss",
         "styles.scss"
       ],
       "scripts": [
