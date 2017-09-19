@@ -5,6 +5,7 @@ import {OnInit} from "@angular/core";
 @Component({
     selector: "peek-main-app",
     templateUrl: "app.component.dweb.html",
+    styleUrls: ["scss/peek-desktop.scss"],
     moduleId: module.id
 })
 export class AppComponent implements OnInit {

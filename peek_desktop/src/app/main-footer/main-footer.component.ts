@@ -5,6 +5,7 @@ import {ComponentLifecycleEventEmitter, VortexStatusService} from "@synerty/vort
 @Component({
     selector: "peek-main-footer",
     templateUrl: "main-footer.component.dweb.html",
+    styleUrls: ["../scss/peek-desktop.scss"],
     moduleId: module.id
 })
 export class MainFooterComponent extends ComponentLifecycleEventEmitter {
