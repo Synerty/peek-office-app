@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {ConfigLink, FooterService, NavBackService} from "@synerty/peek-util";
+import {ConfigLink, FooterService, NavBackService, TitleService} from "@synerty/peek-util";
 import {ComponentLifecycleEventEmitter, VortexStatusService} from "@synerty/vortexjs";
 
 @Component({
@@ -17,7 +17,8 @@ export class MainFooterComponent extends ComponentLifecycleEventEmitter {
     isEnabled: boolean = true;
 
     constructor(vortexStatusService: VortexStatusService,
-                footerService: FooterService) {
+                footerService: FooterService,
+                titleService: TitleService) {
         super();
 
         this.configLinks = footerService.configLinksSnapshot;
@@ -26,7 +27,7 @@ export class MainFooterComponent extends ComponentLifecycleEventEmitter {
             .takeUntil(this.onDestroyEvent)
             .subscribe(v => this.statusText = v);
 
-        footerService.isEnabled
+        titleService.isEnabled
             .takeUntil(this.onDestroyEvent)
             .subscribe(v => this.isEnabled = v);
 
