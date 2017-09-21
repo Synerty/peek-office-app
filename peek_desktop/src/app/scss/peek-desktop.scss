@@ -6,7 +6,7 @@ $general_margin_3: 1 !default;
 $general_padding_3: 1 !default;
 
 .peek-desktop {
-    position: relative;
+    height: 100%;
 }
 
 .peek-desktop-sidebar {
@@ -40,10 +40,26 @@ $general_padding_3: 1 !default;
     bottom: 0;
     width: 250px;
     height: 60px;
+    background-color: #fff;
 }
 
 .peek-desktop-content {
+    height: 100%;
     margin-left: 250px;
-    padding: 16px;
     overflow-y: scroll;
+}
+
+.peek-dc-home-background {
+    height: 100%;
+    background-image: url('/assets/home-background.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+
+.peek-dc-home-logo {
+    height: 100%;
+    display: block;
+    margin: auto;
 }
