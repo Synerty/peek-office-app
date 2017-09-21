@@ -1,9 +1,8 @@
 @import '~@synerty/peek-theme/scss/_variables.web';
 
-$general_margin_1: 1 !default;
-$general_font_size_5: 1 !default;
-$general_margin_3: 1 !default;
-$general_padding_3: 1 !default;
+$general_width_2: 1 !default;
+$black: 1 !default;
+$title_bar_height: 1 !default;
 
 .peek-desktop {
     height: 100%;
@@ -11,7 +10,7 @@ $general_padding_3: 1 !default;
 
 .peek-desktop-sidebar {
     height: 100%;
-    width: 250px;
+    width: $general_width_2;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -24,13 +23,13 @@ $general_padding_3: 1 !default;
 
 .peek-ds-main-title {
     top: 0;
-    width: 250px;
-    height: 60px;
+    width: $general_width_2;
+    height: $title_bar_height;
 }
 
 .peek-ds-main-icons {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: $title_bar_height;
+    margin-bottom: $title_bar_height;
     padding: 10px;
     overflow-y: auto;
 }
@@ -38,14 +37,14 @@ $general_padding_3: 1 !default;
 .peek-ds-footer {
     position: fixed;
     bottom: 0;
-    width: 250px;
-    height: 60px;
+    width: $general_width_2;
+    height: $title_bar_height;
     background-color: #fff;
 }
 
 .peek-desktop-content {
     height: 100%;
-    margin-left: 250px;
+    margin-left: $general_width_2;
     overflow-y: scroll;
 }
 
@@ -55,7 +54,7 @@ $general_padding_3: 1 !default;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #000;
+    background-color: $black;
 }
 
 .peek-dc-home-logo {
