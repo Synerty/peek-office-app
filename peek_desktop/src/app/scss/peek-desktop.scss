@@ -1,0 +1,64 @@
+@import '~@synerty/peek-theme/scss/_variables.web';
+
+$general_width_2: 1 !default;
+$black: 1 !default;
+$title_bar_height: 1 !default;
+
+.peek-desktop {
+    height: 100%;
+}
+
+.peek-desktop-sidebar {
+    height: 100%;
+    width: $general_width_2;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+
+    background-image: url('/assets/sidebar_background.png');
+
+}
+
+.peek-ds-main-title {
+    top: 0;
+    width: $general_width_2;
+    height: $title_bar_height;
+}
+
+.peek-ds-main-icons {
+    margin-top: $title_bar_height;
+    margin-bottom: $title_bar_height;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.peek-ds-footer {
+    position: fixed;
+    bottom: 0;
+    width: $general_width_2;
+    height: $title_bar_height;
+    background-color: #fff;
+}
+
+.peek-desktop-content {
+    height: 100%;
+    margin-left: $general_width_2;
+    overflow-y: scroll;
+}
+
+.peek-dc-home-background {
+    height: 100%;
+    background-image: url('/assets/home-background.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $black;
+}
+
+.peek-dc-home-logo {
+    height: 100%;
+    display: block;
+    margin: auto;
+}

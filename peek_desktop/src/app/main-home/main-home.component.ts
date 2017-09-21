@@ -6,6 +6,7 @@ import {TitleService, NavBackService} from "@synerty/peek-util";
 @Component({
     selector: "peek-main-home",
     templateUrl: 'main-home.component.dweb.html',
+    styleUrls: ["../scss/peek-desktop.scss"],
     moduleId: module.id
 })
 export class MainHomeComponent extends ComponentLifecycleEventEmitter {
