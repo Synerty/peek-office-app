@@ -1,9 +1,5 @@
 @import '~@synerty/peek-theme/scss/_variables.web';
 
-$general_width_2: 1 !default;
-$black: 1 !default;
-$title_bar_height: 1 !default;
-
 .peek-desktop {
     height: 100%;
 }
@@ -21,25 +17,79 @@ $title_bar_height: 1 !default;
 
 }
 
-.peek-ds-main-title {
+.peek-ds-main-header {
     top: 0;
     width: $general_width_2;
+    height: $title_bar_height + $title_bar_height;
+    position: fixed;
+    display: flex;
+    overflow: hidden;
+    background-color: $white;
+    z-index: 1;
+}
+
+.peek-ds-mh-title {
+    top: 0;
+    width: $general_width_2;
+    line-height: $title_bar_height;
+    text-align: center;
+    font-size: $general_font_size_3;
+    color: $black;
+}
+
+.peek-ds-mh-buttons {
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    font-size: $general_font_size_3;
+    border-radius: 0;
+    background-color: $brand;
     height: $title_bar_height;
+    margin-right: 0;
+    display: inline-block;
+    position: relative;
+    min-width: $title_bar_button_min_width;
 }
 
 .peek-ds-main-icons {
-    margin-top: $title_bar_height;
+    margin-top: $title_bar_height + $title_bar_height;
     margin-bottom: $title_bar_height;
-    padding: 10px;
+    padding: $general_padding_1;
     overflow-y: auto;
 }
 
 .peek-ds-footer {
-    position: fixed;
     bottom: 0;
     width: $general_width_2;
+    height: $title_bar_height + $title_bar_height;
+    position: fixed;
+    display: flex;
+    overflow: hidden;
+    background-color: $white;
+    z-index: 1;
+}
+
+.footer-bar-footer {
+    width: $general_width_2;
     height: $title_bar_height;
-    background-color: #fff;
+    line-height: $title_bar_height;
+    text-align: center;
+    font-size: $general_font_size_3;
+    color: $black;
+}
+
+.peek-ds-f-buttons {
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    font-size: $general_font_size_3;
+    border-radius: 0;
+    background-color: $brand;
+    height: $title_bar_height;
+    margin-right: 0;
+    display: inline-block;
+    position: relative;
+    min-width: $title_bar_button_min_width;
 }
 
 .peek-desktop-content {

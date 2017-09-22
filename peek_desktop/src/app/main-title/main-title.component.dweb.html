@@ -1,36 +1,41 @@
-<div class="peek-ds-main-title peek-title-bar"
+<div class="peek-ds-main-header"
      [class.bg-danger]="!vortexIsOnline">
-    <div  *ngIf="isEnabled"
-               class="btn-group pull-left"
-         role="group">
+    <div class="container">
+        <div class="row">
+            <div *ngIf="isEnabled"
+                 class="btn-group pull-left"
+                 role="group">
+                <button class="peek-ds-mh-buttons" (click)="navBackService.navBack()">
+                    <fa name="chevron-left" tooltip="Navigate to the last screen"></fa>
 
-        <button class="footer-bar-btn" (click)="navBackService.navBack()">
-            <fa name="chevron-left" tooltip="Navigate to the last screen"></fa>
-        </button>
-
-        <button
-                class="title-bar-btn"
-                *ngFor="let link of leftLinks"
-                [routerLink]="[link.resourcePath]">
-            {{linkTitle(link)}}
-
-        </button>
-    </div>
-    <div class="title-bar-title">
-        {{title}}
-    </div>
-    <div class="pull-right">
-        <fa *ngIf="!vortexIsOnline" name="unlink"
-            tooltip="Connection to server is offline"></fa>
-        <div *ngIf="isEnabled"
-                    class="btn-group"
-             role="group">
-            <button class="title-bar-btn"
-                    *ngFor="let link of rightLinks"
+                </button>
+                <button
+                    class="peek-ds-mh-buttons"
+                    *ngFor="let link of leftLinks"
                     [routerLink]="[link.resourcePath]">
-                {{linkTitle(link)}}
+                    {{linkTitle(link)}}
 
-            </button>
+                </button>
+            </div>
+            <div *ngIf="isEnabled"
+                 class="btn-group pull-right"
+                 role="group">
+                <button class="peek-ds-mh-buttons"
+                        *ngFor="let link of rightLinks"
+                        [routerLink]="[link.resourcePath]">
+                    {{linkTitle(link)}}
+
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="peek-ds-mh-title">
+                {{title}}
+                <div class="pull-right">
+                    <fa *ngIf="!vortexIsOnline" name="unlink"
+                        tooltip="Connection to server is offline"></fa>
+                </div>
+            </div>
         </div>
     </div>
 </div>
