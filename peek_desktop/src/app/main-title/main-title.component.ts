@@ -65,5 +65,9 @@ export class MainTitleComponent implements OnInit, OnDestroy {
         return `(${title.badgeCount}) ${title.text}`;
 
     }
+
+    isBackButtonEnabled():boolean {
+        return this.navBackService.navBackLen() != 0;
+    }
 }
 

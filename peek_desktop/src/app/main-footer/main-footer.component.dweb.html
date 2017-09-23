@@ -1,4 +1,5 @@
 <div class="peek-ds-footer peek-footer-bar"
+      *ngIf="isEnabled"
      [class.bg-danger]="!vortexIsOnline">
     <div class="container">
         <div class="row">
@@ -8,7 +9,7 @@
         </div>
         <div class="row">
             <div class="pull-right">
-                <button *ngIf="isEnabled" class="peek-ds-f-buttons">
+                <button class="peek-ds-f-buttons">
                     <fa name="cog" tooltip="User Configuration"></fa>
                 </button>
             </div>

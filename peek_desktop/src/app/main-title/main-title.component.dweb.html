@@ -1,25 +1,28 @@
 <div class="peek-ds-main-header"
+     *ngIf="isEnabled"
      [class.bg-danger]="!vortexIsOnline">
     <div class="container">
         <div class="row">
-            <div *ngIf="isEnabled"
-                 class="btn-group pull-left"
-                 role="group">
-                <button class="peek-ds-mh-buttons" (click)="navBackService.navBack()">
+            <div
+                    class="btn-group pull-left"
+                    role="group">
+                <button class="peek-ds-mh-buttons"
+                        [disabled]="!isBackButtonEnabled()"
+                        (click)="navBackService.navBack()">
                     <fa name="chevron-left" tooltip="Navigate to the last screen"></fa>
 
                 </button>
                 <button
-                    class="peek-ds-mh-buttons"
-                    *ngFor="let link of leftLinks"
-                    [routerLink]="[link.resourcePath]">
+                        class="peek-ds-mh-buttons"
+                        *ngFor="let link of leftLinks"
+                        [routerLink]="[link.resourcePath]">
                     {{linkTitle(link)}}
 
                 </button>
             </div>
-            <div *ngIf="isEnabled"
-                 class="btn-group pull-right"
-                 role="group">
+            <div
+                    class="btn-group pull-right"
+                    role="group">
                 <button class="peek-ds-mh-buttons"
                         *ngFor="let link of rightLinks"
                         [routerLink]="[link.resourcePath]">
