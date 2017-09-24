@@ -10,7 +10,7 @@ import {homeLinks} from "../../plugin-home-links";
 @Component({
     selector: "peek-main-icons",
     templateUrl: 'main-icons.component.dweb.html',
-    styleUrls: ["../scss/peek-desktop.scss"],
+    styleUrls: ["main-icons.component.dweb.scss"],
     moduleId: module.id
 })
 export class MainIconsComponent extends ComponentLifecycleEventEmitter {

@@ -7,7 +7,7 @@ import {VortexStatusService} from "@synerty/vortexjs";
 @Component({
     selector: "peek-main-title",
     templateUrl: "main-title.component.dweb.html",
-    styleUrls: ["../scss/peek-desktop.scss"],
+    styleUrls: ["main-title.component.dweb.scss"],
     moduleId: module.id
 })
 export class MainTitleComponent implements OnInit, OnDestroy {
