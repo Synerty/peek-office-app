@@ -1,12 +1,14 @@
 @import '~@synerty/peek-theme/scss/_variables.web';
 
+$side_bar_width: 150px;
+
 .peek-desktop {
     height: 100%;
 }
 
 .peek-desktop-sidebar {
     height: 100%;
-    width: $general_width_2;
+    width: $side_bar_width;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -19,7 +21,7 @@
 
 .peek-ds-main-header {
     top: 0;
-    width: $general_width_2;
+    width: $side_bar_width;
     height: $title_bar_height + $title_bar_height;
     position: fixed;
     display: flex;
@@ -30,7 +32,7 @@
 
 .peek-ds-mh-title {
     top: 0;
-    width: $general_width_2;
+    width: $side_bar_width;
     line-height: $title_bar_height;
     text-align: center;
     font-size: $general_font_size_3;
@@ -60,7 +62,7 @@
 
 .peek-ds-footer {
     bottom: 0;
-    width: $general_width_2;
+    width: $side_bar_width;
     height: $title_bar_height + $title_bar_height;
     position: fixed;
     display: flex;
@@ -70,7 +72,7 @@
 }
 
 .footer-bar-footer {
-    width: $general_width_2;
+    width: $side_bar_width;
     height: $title_bar_height;
     line-height: $title_bar_height;
     text-align: center;
@@ -94,7 +96,7 @@
 
 .peek-desktop-content {
     height: 100%;
-    margin-left: $general_width_2;
+    left: $side_bar_width;
     overflow-y: scroll;
 }
 

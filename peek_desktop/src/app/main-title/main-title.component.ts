@@ -1,7 +1,7 @@
 import {OnInit, OnDestroy} from "@angular/core";
 import {ActivatedRoute} from "@angular/router";
 import {Component} from "@angular/core";
-import {TitleService, TitleBarLink} from "@synerty/peek-util";
+import {TitleService, TitleBarLink, NavBackService} from "@synerty/peek-util";
 import {VortexStatusService} from "@synerty/vortexjs";
 
 @Component({
@@ -21,7 +21,9 @@ export class MainTitleComponent implements OnInit, OnDestroy {
     isEnabled: boolean = true;
     vortexIsOnline:boolean= false;
 
-    constructor(vortexStatusService:VortexStatusService, titleService: TitleService) {
+    constructor(vortexStatusService:VortexStatusService,
+                titleService: TitleService,
+                private navBackService: NavBackService) {
         this.leftLinks = titleService.leftLinksSnapshot;
         this.rightLinks = titleService.rightLinksSnapshot;
 
