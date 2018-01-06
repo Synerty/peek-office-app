@@ -2,12 +2,13 @@
 
 #Ignore the automatically generated files
 .lastHash
-**/plugin-routes.ts
+**/plugin-app-routes.ts
+**/plugin-cfg-routes.ts
 **/plugin-root-services.ts
 **/plugin-root-modules.ts
 **/plugin-home-links.ts
 **/plugin-title-bar-links.ts
-**/plugin-footer-bar-links.ts
+**/plugin-config-links.ts
 **/peek_plugin_*
 **/peek_core_*
 **/build-ns/app/app/

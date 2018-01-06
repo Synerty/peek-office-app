@@ -31,6 +31,8 @@ sed -i "s;^package_version.*=.*;package_version = '${VER}';"  setup.py
 # Update the package version
 sed -i "s;.*version.*;__version__ = '${VER}';" ${PACKAGE}/__init__.py
 
+sed -i "s/111.111.111/${VER}/g" peek_desktop/src/app/main-config/main-config.component.dweb.html
+
 # Upload to test pypi
 if [[ ${VER} == *"dev"* ]]; then
     python setup.py  sdist --format=gztar

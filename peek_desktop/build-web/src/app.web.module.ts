@@ -29,6 +29,7 @@ import {peekRootServices} from "./app/app.services";
 // This app
 import {AppComponent} from "./app/app.component";
 import {MainHomeComponent} from "./app/main-home/main-home.component";
+import {MainConfigComponent} from "./app/main-config/main-config.component";
 import {MainIconsComponent} from "./app/main-icons/main-icons.component";
 import {MainTitleComponent} from "./app/main-title/main-title.component";
 import {MainFooterComponent} from "./app/main-footer/main-footer.component";
@@ -49,6 +50,7 @@ export function tupleOfflineStorageNameServiceFactory() {
     declarations: [AppComponent,
         MainTitleComponent,
         MainHomeComponent,
+        MainConfigComponent,
         MainFooterComponent,
         MainIconsComponent,
         UnknownRouteComponent],
