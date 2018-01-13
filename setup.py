@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 pip_package_name = "peek-desktop"
 py_package_name = "peek_desktop"
 
-package_version = '0.8.1'
+package_version = '###PEEKVER###'
 
 egg_info = "%s.egg-info" % pip_package_name
 if os.path.isdir(egg_info):
