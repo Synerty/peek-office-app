@@ -5,7 +5,7 @@
 .peek-ds-main-header {
     top: 0;
     width: $desktop_side_bar_width;
-    height: $title_bar_height + $title_bar_height;
+    height: $title_bar_height;
     position: fixed;
     display: flex;
     overflow: hidden;
@@ -35,4 +35,3 @@
     position: relative;
     min-width: $title_bar_button_min_width;
 }
-

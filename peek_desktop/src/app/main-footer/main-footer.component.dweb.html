@@ -1,5 +1,5 @@
 <div class="peek-ds-footer peek-footer-bar"
-      *ngIf="isEnabled"
+     *ngIf="isEnabled"
      [class.bg-danger]="!vortexIsOnline">
     <div class="container">
         <div class="row">
@@ -8,6 +8,23 @@
             </div>
         </div>
         <div class="row">
+            <div class="btn-group pull-left"
+                 role="group">
+                <button class="peek-ds-f-buttons"
+                        [disabled]="!isBackButtonEnabled()"
+                        [class.peek-ds-f-buttons-disabled]="!isBackButtonEnabled()"
+                        (click)="navBackService.navBack()">
+                    <fa name="chevron-left" tooltip="Navigate to the last screen"></fa>
+
+                </button>
+                <button
+                    class="peek-ds-f-buttons"
+                    *ngFor="let link of leftLinks"
+                    [routerLink]="[link.resourcePath]">
+                    {{linkTitle(link)}}
+
+                </button>
+            </div>
             <div class="pull-right">
                 <button class="peek-ds-f-buttons"
                         [routerLink]="['/config']">

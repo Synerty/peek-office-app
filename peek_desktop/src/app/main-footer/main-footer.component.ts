@@ -41,6 +41,8 @@ export class MainFooterComponent extends ComponentLifecycleEventEmitter {
 
     }
 
-
+    isBackButtonEnabled():boolean {
+        return false;
+    }
 }
 
