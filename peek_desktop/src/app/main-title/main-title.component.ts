@@ -22,8 +22,7 @@ export class MainTitleComponent implements OnInit, OnDestroy {
     vortexIsOnline:boolean= false;
 
     constructor(vortexStatusService:VortexStatusService,
-                titleService: TitleService,
-                private navBackService: NavBackService) {
+                titleService: TitleService) {
         this.leftLinks = titleService.leftLinksSnapshot;
         this.rightLinks = titleService.rightLinksSnapshot;
 
@@ -66,10 +65,6 @@ export class MainTitleComponent implements OnInit, OnDestroy {
 
         return `(${title.badgeCount}) ${title.text}`;
 
-    }
-
-    isBackButtonEnabled():boolean {
-        return this.navBackService.navBackLen() != 0;
     }
 }
 

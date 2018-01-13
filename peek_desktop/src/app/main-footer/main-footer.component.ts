@@ -18,7 +18,8 @@ export class MainFooterComponent extends ComponentLifecycleEventEmitter {
 
     constructor(vortexStatusService: VortexStatusService,
                 footerService: FooterService,
-                titleService: TitleService) {
+                titleService: TitleService,
+                private navBackService: NavBackService) {
         super();
 
         this.configLinks = footerService.configLinksSnapshot;
@@ -41,6 +42,8 @@ export class MainFooterComponent extends ComponentLifecycleEventEmitter {
 
     }
 
-
+    isBackButtonEnabled():boolean {
+        return false;
+    }
 }
 

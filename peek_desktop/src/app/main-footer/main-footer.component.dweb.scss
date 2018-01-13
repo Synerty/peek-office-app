@@ -5,7 +5,7 @@
 .peek-ds-footer {
     bottom: 0;
     width: $desktop_side_bar_width;
-    height: $title_bar_height + $title_bar_height;
+    height: $title_bar_height;
     position: fixed;
     display: flex;
     overflow: hidden;
@@ -15,10 +15,10 @@
 
 .footer-bar-footer {
     width: $desktop_side_bar_width;
-    height: $title_bar_height;
-    line-height: $title_bar_height;
+    height: $title_bar_height/2;
+    line-height: $title_bar_height/2;
     text-align: center;
-    font-size: $general_font_size_3;
+    font-size: $general_font_size_1;
     color: $black;
 }
 
@@ -26,12 +26,20 @@
     color: #fff;
     cursor: pointer;
     border: 0;
-    font-size: $general_font_size_3;
+    font-size: $general_font_size_1;
     border-radius: 0;
     background-color: $brand;
-    height: $title_bar_height;
+    height: $title_bar_height/2;
     margin-right: 0;
     display: inline-block;
     position: relative;
-    min-width: $title_bar_button_min_width;
+    min-width: $title_bar_button_min_width/2;
 }
+
+.peek-ds-f-buttons-disabled {
+    cursor: not-allowed;
+    box-shadow: none;
+    background-color: $general_button_background_disabled;
+    color: $font_colour_disabled;
+}
+
