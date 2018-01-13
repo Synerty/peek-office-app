@@ -18,7 +18,8 @@ export class MainFooterComponent extends ComponentLifecycleEventEmitter {
 
     constructor(vortexStatusService: VortexStatusService,
                 footerService: FooterService,
-                titleService: TitleService) {
+                titleService: TitleService,
+                private navBackService: NavBackService) {
         super();
 
         this.configLinks = footerService.configLinksSnapshot;

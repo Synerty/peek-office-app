@@ -3,6 +3,16 @@
      [class.bg-danger]="!vortexIsOnline">
     <div class="container">
         <div class="row">
+            <div class="btn-group pull-left"
+                 role="group">
+                <button
+                    class="peek-ds-mh-buttons"
+                    *ngFor="let link of leftLinks"
+                    [routerLink]="[link.resourcePath]">
+                    {{linkTitle(link)}}
+
+                </button>
+            </div>
             <div class="btn-group pull-right"
                  role="group">
                 <button class="peek-ds-mh-buttons"

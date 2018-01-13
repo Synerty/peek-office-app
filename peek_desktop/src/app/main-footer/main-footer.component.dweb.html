@@ -17,13 +17,6 @@
                     <fa name="chevron-left" tooltip="Navigate to the last screen"></fa>
 
                 </button>
-                <button
-                    class="peek-ds-f-buttons"
-                    *ngFor="let link of leftLinks"
-                    [routerLink]="[link.resourcePath]">
-                    {{linkTitle(link)}}
-
-                </button>
             </div>
             <div class="pull-right">
                 <button class="peek-ds-f-buttons"
