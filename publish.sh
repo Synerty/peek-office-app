@@ -41,7 +41,7 @@ if [[ ${VER} == *"dev"* ]]; then
     git reset --hard
 
 else
-    python setup.py sdist --format=gztar
+    python setup.py sdist --format=gztar upload
     git reset --hard
 
     git tag ${VER}
@@ -51,7 +51,5 @@ fi
 
 
 
-echo "If you're happy with this you can now run :"
-echo
-echo "python setup.py sdist upload -r pypi"
-echo
+
+echo "Publish Complete"
