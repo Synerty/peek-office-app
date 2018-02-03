@@ -1,6 +1,5 @@
 <div class="peek-ds-main-header"
-     *ngIf="isEnabled"
-     [class.bg-danger]="!vortexIsOnline">
+     *ngIf="isEnabled">
     <div class="container">
         <div class="row">
             <div class="btn-group pull-left"
@@ -24,7 +23,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="peek-ds-mh-title">
+            <div class="peek-ds-mh-title"
+                 [class.bg-danger]="!vortexIsOnline">
                 {{title}}
                 <div class="pull-right">
                     <fa *ngIf="!vortexIsOnline" name="unlink"
