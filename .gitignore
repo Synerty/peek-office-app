@@ -13,6 +13,8 @@
 **/peek_core_*
 **/build-ns/app/app/
 **/build-web/src/app/
+**/build-web/src/@synerty/ng2-balloon-msg
+**/build-web/src/@synerty/peek-util
 
 # Ignore the CSS files that we have SCSS files for
 # NativeScript
