@@ -6,8 +6,8 @@ import {NgModule} from "@angular/core";
 import {HttpModule} from "@angular/http";
 import {RouterModule} from "@angular/router";
 // @synerty
-import {Ng2BalloonMsgModule} from "@synerty/ng2-balloon-msg/index.web";
-import {PeekModuleFactory} from "@synerty/peek-util/index.web";
+import {Ng2BalloonMsgModule} from "@synerty/ng2-balloon-msg-web";
+import {PeekModuleFactory} from "@synerty/peek-util-web";
 import {
     TupleActionPushOfflineSingletonService,
     TupleDataObservableNameService,
