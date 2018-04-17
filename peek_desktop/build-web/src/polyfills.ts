@@ -57,6 +57,9 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 
 
 
+import 'rxjs/add/observable/zip';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/zip';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/takeUntil';
 import 'rxjs/add/operator/first';
