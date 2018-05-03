@@ -70,19 +70,7 @@ export function tupleOfflineStorageNameServiceFactory() {
         {provide: TupleStorageFactoryService, useClass: TupleStorageFactoryServiceWeb},
         TupleActionPushOfflineSingletonService,
 
-        // Use the TupleDataObserver services, with offline storage
-        {
-            provide: TupleDataObservableNameService,
-            useFactory: tupleDataObservableNameServiceFactory
-        }, {
-            provide: TupleOfflineStorageNameService,
-            useFactory: tupleOfflineStorageNameServiceFactory
-        },
 
-        // These have NAME dependencies
-        TupleDataObserverService,
-        TupleOfflineStorageService,
-        TupleDataOfflineObserverService,
 
         ...peekRootServices,
         ...pluginRootServices,
