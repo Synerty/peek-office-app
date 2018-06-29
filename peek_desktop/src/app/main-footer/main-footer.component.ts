@@ -1,5 +1,10 @@
 import {Component} from "@angular/core";
-import {ConfigLink, FooterService, NavBackService, TitleService} from "@synerty/peek-util";
+import {
+    ConfigLink,
+    FooterService,
+    NavBackService,
+    TitleService
+} from "@synerty/peek-util";
 import {ComponentLifecycleEventEmitter, VortexStatusService} from "@synerty/vortexjs";
 
 @Component({
@@ -42,8 +47,8 @@ export class MainFooterComponent extends ComponentLifecycleEventEmitter {
 
     }
 
-    isBackButtonEnabled():boolean {
-        return false;
+    isBackButtonEnabled(): boolean {
+        return this.navBackService.navBackLen() != 0;
     }
 }
 
