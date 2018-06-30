@@ -2,20 +2,27 @@
 <div class="peek-config-screen">
     <div class="container-fluid">
         <div class="row">
-            <div class="config-screen-message">
-                Peek Native Mobile App v###PEEKVER###
+            <div class="col-md-12">
+                <div class="config-screen-message">
+                    Peek Native Mobile App v###PEEKVER###
+                </div>
             </div>
         </div>
         <div class="row" *ngIf="!appDetails.length">
-            <div class="config-screen-message">
-                No Plugin Configs Availible
+            <div class="col-md-12">
+                <div class="config-screen-message">
+                    No Plugin Configs Availible
+                </div>
             </div>
         </div>
-        <div class="row"
-             *ngFor="let app of appDetails">
-            <button class="btn" [routerLink]="[item.resourcePath]">
-                {{item.title}}
-            </button>
+        <div class="row" *ngFor="let item of appDetails">
+            <div class="col-md-12">
+                <p>
+                    <button class="btn btn-block" [routerLink]="[item.resourcePath]">
+                        {{item.title}}
+                    </button>
+                </p>
+            </div>
         </div>
     </div>
 </div>
