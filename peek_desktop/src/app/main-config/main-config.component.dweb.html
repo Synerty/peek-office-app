@@ -13,11 +13,9 @@
         </div>
         <div class="row"
              *ngFor="let app of appDetails">
-            <div class="col-md-12"
-                 [routerLink]="[app.resourcePath]">
-                <img [src]="[app.pluginIconPath]">
-                {{app.title}}
-            </div>
+            <button class="btn" [routerLink]="[item.resourcePath]">
+                {{item.title}}
+            </button>
         </div>
     </div>
 </div>
