@@ -5,15 +5,18 @@
         "sourceMap": true,
         "declaration": false,
         "moduleResolution": "node",
+        "baseUrl": ".",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "target": "es5",
         "lib": [
             "es2016",
             "dom"
-        ]
-    },
-    "include": [
-        "node_modules/@synerty/**/*.ts"
-    ]
+        ],
+        "paths": {
+            "~/*": [
+                "./src/*"
+            ]
+        }
+    }
 }
