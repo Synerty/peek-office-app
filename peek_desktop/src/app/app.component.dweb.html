@@ -10,7 +10,8 @@
 
     <!-- Right Contents -->
     <div class="peek-desktop-content">
-            <router-outlet></router-outlet>
+        <core-device-loading *ngIf="showLoading()"></core-device-loading>
+        <router-outlet [hidden]="showLoading()"></router-outlet>
     </div>
 
 </div>
