@@ -19,7 +19,8 @@ if os.path.isfile('MANIFEST'):
 
 excludePathContains = ('__pycache__', 'node_modules', 'platforms', 'dist')
 excludeFilesEndWith = ('.pyc', '.js', '.js.map', '.lastHash')
-excludeFilesStartWith = ('peek_plugin',)
+excludeFilesStartWith = ('peek_plugin', 'peek_core')
+includeFilesStartWith = ('webpack.config.js', 'karma.conf.js', 'protractor.conf.js')
 
 
 def find_package_files():
@@ -29,11 +30,12 @@ def find_package_files():
             continue
 
         for filename in filenames:
-            if [e for e in excludeFilesEndWith if filename.endswith(e)]:
-                continue
+            if not [e for e in includeFilesStartWith if filename.startswith(e)]:
+                if [e for e in excludeFilesEndWith if filename.endswith(e)]:
+                    continue
 
-            if [e for e in excludeFilesStartWith if filename.startswith(e)]:
-                continue
+                if [e for e in excludeFilesStartWith if filename.startswith(e)]:
+                    continue
 
             relPath = os.path.join(path, filename)
             try:
@@ -44,6 +46,7 @@ def find_package_files():
 
     return paths
 
+
 package_files = find_package_files()
 
 setup(
@@ -51,7 +54,7 @@ setup(
     packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     package_data={'': package_files},
     install_requires=[],
-    zip_safe=False,version=package_version,
+    zip_safe=False, version=package_version,
     description='Peek Platform - desktop Service (Frontend)',
     author='Synerty',
     author_email='contact@synerty.com',
