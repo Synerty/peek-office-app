@@ -23,7 +23,10 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
-              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/brands.scss",
+              "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/fontawesome.scss",
+              "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/solid.scss",
+              "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/v4-shims.scss",
               "node_modules/@synerty/peek-theme/scss/layout.web.scss",
               "node_modules/@synerty/peek-theme/scss/style.web.scss",
               "src/styles.scss"
@@ -86,7 +89,10 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
-              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/brands.scss",
+              "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/fontawesome.scss",
+              "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/solid.scss",
+              "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/v4-shims.scss",
               "node_modules/@synerty/peek-theme/scss/layout.web.scss",
               "node_modules/@synerty/peek-theme/scss/style.web.scss",
               "src/styles.scss"
