@@ -4,9 +4,15 @@ import {pluginAppRoutes} from "../plugin-app-routes";
 import {pluginCfgRoutes} from "../plugin-cfg-routes";
 
 import {DeviceEnrolledGuard} from "@peek/peek_core_device";
+import {LoggedInGuard} from "@peek/peek_core_user";
+
 import {MainConfigComponent} from "./main-config/main-config.component";
 
 export const staticRoutes = [
+    {
+        path: 'peek_core_user',
+        loadChildren: "peek_core_user/plugin-user.module#PluginUserModule"
+    },
     {
         path: 'peek_core_device',
         loadChildren: "peek_core_device/device.module#DeviceModule"
@@ -14,7 +20,7 @@ export const staticRoutes = [
     // All routes require the device to be enrolled
     {
         path: '',
-        canActivate: [DeviceEnrolledGuard],
+        canActivate: [DeviceEnrolledGuard, LoggedInGuard],
         children: [
             {
                 path: '',
