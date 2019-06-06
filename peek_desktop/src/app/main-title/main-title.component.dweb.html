@@ -4,6 +4,14 @@
         <div class="row">
             <div class="btn-group pull-left"
                  role="group">
+                <button class="peek-ds-mh-buttons"
+                        [routerLink]="['/peek_core_user']">
+                    <fa name="user" tooltip="Login / Logout"></fa>
+                </button>
+                <button class="peek-ds-mh-buttons"
+                        [routerLink]="['/peek_core_search']">
+                    <fa name="search" tooltip="Search"></fa>
+                </button>
                 <button
                     class="peek-ds-mh-buttons"
                     *ngFor="let link of leftLinks"
