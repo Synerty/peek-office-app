@@ -36,6 +36,7 @@ import {MainFooterComponent} from "./app/main-footer/main-footer.component";
 import {UnknownRouteComponent} from "./app/unknown-route/unknown-route.component";
 import {pluginRootModules} from "./plugin-root-modules";
 import {pluginRootServices} from "./plugin-root-services";
+import {PluginRootComponent} from "./app/plugin-root.component";
 
 export function tupleDataObservableNameServiceFactory() {
     return new TupleDataObservableNameService("peek_client", {"plugin": "peek_client"});
@@ -53,7 +54,8 @@ export function tupleOfflineStorageNameServiceFactory() {
         MainConfigComponent,
         MainFooterComponent,
         MainIconsComponent,
-        UnknownRouteComponent],
+        UnknownRouteComponent,
+        PluginRootComponent],
     bootstrap: [AppComponent],
     imports: [
         RouterModule,

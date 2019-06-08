@@ -9,6 +9,8 @@
 **/plugin-home-links.ts
 **/plugin-title-bar-links.ts
 **/plugin-config-links.ts
+**/plugin-root.component.ns.html
+**/plugin-root.component.web.html
 **/peek_plugin_*
 **/peek_core_*
 **/build-ns/app/app/
