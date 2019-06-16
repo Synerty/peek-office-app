@@ -17,8 +17,8 @@
 
 
 .peek-desktop-content {
-    height: 100%;
+    //height: 100%;
     margin-left: $desktop_side_bar_width;
     left: $desktop_side_bar_width;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
