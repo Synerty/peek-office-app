@@ -37,6 +37,13 @@ import {UnknownRouteComponent} from "./app/unknown-route/unknown-route.component
 import {pluginRootModules} from "./plugin-root-modules";
 import {pluginRootServices} from "./plugin-root-services";
 import {PluginRootComponent} from "./app/plugin-root.component";
+import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
+
+
+/** config angular i18n **/
+import { registerLocaleData } from '@angular/common';
+import en from '@angular/common/locales/en';
+registerLocaleData(en);
 
 export function tupleDataObservableNameServiceFactory() {
     return new TupleDataObservableNameService("peek_client", {"plugin": "peek_client"});
@@ -65,9 +72,11 @@ export function tupleOfflineStorageNameServiceFactory() {
         ...PeekModuleFactory.FormsModules,
         HttpModule,
         Ng2BalloonMsgModule,
-        ...pluginRootModules
+        ...pluginRootModules,
+        NgZorroAntdModule
     ],
     providers: [
+    { provide: NZ_I18N, useValue: en_US },
         {provide: WebSqlFactoryService, useClass: WebSqlBrowserFactoryService},
         {provide: TupleStorageFactoryService, useClass: TupleStorageFactoryServiceWeb},
         TupleActionPushOfflineSingletonService,
