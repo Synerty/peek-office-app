@@ -3,7 +3,6 @@ import {BrowserModule} from "@angular/platform-browser";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 import {NgModule} from "@angular/core";
-import {HttpModule} from "@angular/http";
 import {RouterModule} from "@angular/router";
 // @synerty
 import {Ng2BalloonMsgModule} from "@synerty/ng2-balloon-msg-web";
@@ -70,7 +69,6 @@ export function tupleOfflineStorageNameServiceFactory() {
         BrowserModule,
         BrowserAnimationsModule,
         ...PeekModuleFactory.FormsModules,
-        HttpModule,
         Ng2BalloonMsgModule,
         ...pluginRootModules,
         NgZorroAntdModule
