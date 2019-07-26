@@ -33,7 +33,6 @@
                             "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/solid.scss",
                             "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/v4-shims.scss",
                             "node_modules/@synerty/peek-theme/scss/layout.web.scss",
-                            "node_modules/@synerty/peek-theme/scss/style.web.scss",
                             "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
                             "src/styles.scss"
                         ],
@@ -100,7 +99,6 @@
                             "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/solid.scss",
                             "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/v4-shims.scss",
                             "node_modules/@synerty/peek-theme/scss/layout.web.scss",
-                            "node_modules/@synerty/peek-theme/scss/style.web.scss",
                             "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
                             "src/styles.scss"
                         ],

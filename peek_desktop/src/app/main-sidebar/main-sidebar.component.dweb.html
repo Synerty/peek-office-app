@@ -84,7 +84,9 @@
             </button>
         </div>
 
-        <div nz-tooltip [nzTitle]="poweredByTemplate" nzPlacement="rightTop">
+        <div [routerLink]="['/']"
+             nz-tooltip [nzTitle]="poweredByTemplate" nzPlacement="rightTop">
+
             <img class="sidebar-powered-by"
                  src="/assets/home-center.png">
         </div>
