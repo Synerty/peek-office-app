@@ -4,14 +4,11 @@
 .peek-dc-home-background {
     height: 100%;
     background-image: url('/assets/home-background.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size: cover;
     background-color: $black;
 }
 
 .peek-dc-home-logo {
-    height: 100%;
     display: block;
     margin: auto;
 }

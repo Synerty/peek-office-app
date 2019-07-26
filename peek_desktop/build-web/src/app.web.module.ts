@@ -10,10 +10,7 @@ import {PeekModuleFactory} from "@synerty/peek-util-web";
 import {
     TupleActionPushOfflineSingletonService,
     TupleDataObservableNameService,
-    TupleDataObserverService,
-    TupleDataOfflineObserverService,
     TupleOfflineStorageNameService,
-    TupleOfflineStorageService,
     TupleStorageFactoryService,
     WebSqlFactoryService
 } from "@synerty/vortexjs";
@@ -29,19 +26,16 @@ import {peekRootServices} from "./app/app.services";
 import {AppComponent} from "./app/app.component";
 import {MainHomeComponent} from "./app/main-home/main-home.component";
 import {MainConfigComponent} from "./app/main-config/main-config.component";
-import {MainIconsComponent} from "./app/main-icons/main-icons.component";
-import {MainTitleComponent} from "./app/main-title/main-title.component";
-import {MainFooterComponent} from "./app/main-footer/main-footer.component";
+import {MainSidebarComponent} from "./app/main-sidebar/main-sidebar.component";
 import {UnknownRouteComponent} from "./app/unknown-route/unknown-route.component";
 import {pluginRootModules} from "./plugin-root-modules";
 import {pluginRootServices} from "./plugin-root-services";
 import {PluginRootComponent} from "./app/plugin-root.component";
-import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
-
-
+import {en_US, NgZorroAntdModule, NZ_I18N} from 'ng-zorro-antd';
 /** config angular i18n **/
-import { registerLocaleData } from '@angular/common';
+import {registerLocaleData} from '@angular/common';
 import en from '@angular/common/locales/en';
+
 registerLocaleData(en);
 
 export function tupleDataObservableNameServiceFactory() {
@@ -55,11 +49,9 @@ export function tupleOfflineStorageNameServiceFactory() {
 
 @NgModule({
     declarations: [AppComponent,
-        MainTitleComponent,
         MainHomeComponent,
         MainConfigComponent,
-        MainFooterComponent,
-        MainIconsComponent,
+        MainSidebarComponent,
         UnknownRouteComponent,
         PluginRootComponent],
     bootstrap: [AppComponent],
@@ -74,11 +66,10 @@ export function tupleOfflineStorageNameServiceFactory() {
         NgZorroAntdModule
     ],
     providers: [
-    { provide: NZ_I18N, useValue: en_US },
+        {provide: NZ_I18N, useValue: en_US},
         {provide: WebSqlFactoryService, useClass: WebSqlBrowserFactoryService},
         {provide: TupleStorageFactoryService, useClass: TupleStorageFactoryServiceWeb},
         TupleActionPushOfflineSingletonService,
-
 
 
         ...peekRootServices,

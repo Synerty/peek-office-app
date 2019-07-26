@@ -1,24 +1,18 @@
 @import '~@synerty/peek-theme/scss/_variables.web';
 
-.peek-desktop {
+.peek-desktop-row {
+    display: flex;
     height: 100%;
 }
 
 .peek-desktop-sidebar {
-    height: 100%;
-    width: $desktop_side_bar_width;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    background-image: url('/assets/sidebar_background.png');
+    //width: $desktop_side_bar_width;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: $desktop_side_bar_width / 2;
 }
 
-
 .peek-desktop-content {
-    //height: 100%;
-    margin-left: $desktop_side_bar_width;
-    left: $desktop_side_bar_width;
+    flex-grow: 1;
     overflow-y: auto;
 }

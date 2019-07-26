@@ -1,15 +1,24 @@
-import {Component, OnDestroy, OnInit} from "@angular/core";
-import {ActivatedRoute} from "@angular/router";
-import {NavBackService, TitleBarLink, TitleService} from "@synerty/peek-util";
+import {Component} from "@angular/core";
+import {homeLinks} from "../../plugin-home-links";
+import {
+    ConfigLink,
+    FooterService,
+    NavBackService,
+    TitleBarLink,
+    TitleService
+} from "@synerty/peek-util";
 import {ComponentLifecycleEventEmitter, VortexStatusService} from "@synerty/vortexjs";
 
+
 @Component({
-    selector: "peek-main-title",
-    templateUrl: "main-title.component.dweb.html",
-    styleUrls: ["main-title.component.dweb.scss"],
+    selector: "peek-main-sidebar",
+    templateUrl: 'main-sidebar.component.dweb.html',
+    styleUrls: ["main-sidebar.component.dweb.scss"],
     moduleId: module.id
 })
-export class MainTitleComponent extends ComponentLifecycleEventEmitter implements OnInit {
+export class MainSidebarComponent extends ComponentLifecycleEventEmitter {
+
+    appDetails = homeLinks;
 
     private leftLinks = [];
     private rightLinks = [];
@@ -18,8 +27,14 @@ export class MainTitleComponent extends ComponentLifecycleEventEmitter implement
     isEnabled: boolean = true;
     vortexIsOnline: boolean = false;
 
+
+    configLinks: ConfigLink[] = [];
+    statusText: string = "";
+
     constructor(vortexStatusService: VortexStatusService,
-                titleService: TitleService) {
+                footerService: FooterService,
+                titleService: TitleService,
+                private navBackService: NavBackService) {
         super();
         this.leftLinks = titleService.leftLinksSnapshot;
         this.rightLinks = titleService.rightLinksSnapshot;
@@ -39,6 +54,15 @@ export class MainTitleComponent extends ComponentLifecycleEventEmitter implement
         vortexStatusService.isOnline.takeUntil(this.onDestroyEvent)
             .subscribe(v => this.vortexIsOnline = v);
 
+        footerService.statusText
+            .takeUntil(this.onDestroyEvent)
+            .subscribe(v => this.statusText = v);
+
+
+        footerService.configLinks
+            .takeUntil(this.onDestroyEvent)
+            .subscribe(v => this.configLinks = v);
+
     }
 
     ngOnInit() {
@@ -47,6 +71,10 @@ export class MainTitleComponent extends ComponentLifecycleEventEmitter implement
 
     // ------------------------------
     // Display methods
+
+    isBackButtonEnabled(): boolean {
+        return this.navBackService.navBackLen() != 0;
+    }
 
     linkTitle(title: TitleBarLink) {
         if (title.badgeCount == null) {
@@ -60,5 +88,7 @@ export class MainTitleComponent extends ComponentLifecycleEventEmitter implement
         return `(${title.badgeCount}) ${title.text}`;
 
     }
+
+
 }
 
