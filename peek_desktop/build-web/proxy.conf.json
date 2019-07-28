@@ -5,7 +5,7 @@
         "logLevel": "debug"
     },
     "/vortexws": {
-        "target": "http://localhost:8002/vortexws",
+        "target": "ws://localhost:8002/vortexws",
         "secure": false,
         "logLevel": "debug",
         "ws": true
