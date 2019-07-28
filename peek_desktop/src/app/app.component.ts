@@ -18,10 +18,9 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.vortexService.reconnect();
     }
 
-    showLoading():boolean {
+    showLoading(): boolean {
         return this.deviceStatusService.isLoading;
     }
 
