@@ -1,12 +1,11 @@
 <div class="peek-ds-main-header" *ngIf="isEnabled">
     <div class="sidebar-top">
-        <div class="peek-ds-mh-title"
-             [class.bg-danger]="!vortexIsOnline">
+
+        <div *ngIf="!vortexIsOnline">
+            <nz-alert nzType="error" nzMessage="Offline"></nz-alert>
+        </div>
+        <div class="peek-ds-mh-title">
             {{title}}
-            <div class="pull-right">
-                <fa *ngIf="!vortexIsOnline" name="unlink"
-                    tooltip="Connection to server is offline"></fa>
-            </div>
         </div>
 
         <div>
@@ -22,10 +21,12 @@
 
         <div>
             <button class="sidebar-button"
-                    [routerLink]="['/peek_core_search']"
+                    (click)="showSearchClicked()"
                     nzTitle="Search for Anything" nzPlacement="right" nz-tooltip>
                 <fa name="search" tooltip="Search"></fa>
             </button>
+
+            <plugin-search [(showSearch)]="showSearch"></plugin-search>
         </div>
 
         <div *ngFor="let link of leftLinks">

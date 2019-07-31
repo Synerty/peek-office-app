@@ -35,6 +35,7 @@ import {en_US, NgZorroAntdModule, NZ_I18N} from 'ng-zorro-antd';
 /** config angular i18n **/
 import {registerLocaleData} from '@angular/common';
 import en from '@angular/common/locales/en';
+import {SearchModule} from "peek_core_search/search.module";
 
 registerLocaleData(en);
 
@@ -63,7 +64,8 @@ export function tupleOfflineStorageNameServiceFactory() {
         ...PeekModuleFactory.FormsModules,
         Ng2BalloonMsgModule,
         ...pluginRootModules,
-        NgZorroAntdModule
+        NgZorroAntdModule,
+        SearchModule
     ],
     providers: [
         {provide: NZ_I18N, useValue: en_US},

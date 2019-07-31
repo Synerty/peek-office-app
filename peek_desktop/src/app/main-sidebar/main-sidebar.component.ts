@@ -8,6 +8,7 @@ import {
     TitleService
 } from "@synerty/peek-util";
 import {ComponentLifecycleEventEmitter, VortexStatusService} from "@synerty/vortexjs";
+import {LoggedInGuard} from "@peek/peek_core_user";
 
 
 @Component({
@@ -31,10 +32,13 @@ export class MainSidebarComponent extends ComponentLifecycleEventEmitter {
     configLinks: ConfigLink[] = [];
     statusText: string = "";
 
+    showSearch = false;
+
     constructor(vortexStatusService: VortexStatusService,
                 footerService: FooterService,
                 titleService: TitleService,
-                private navBackService: NavBackService) {
+                private navBackService: NavBackService,
+                private loggedInGuard: LoggedInGuard) {
         super();
         this.leftLinks = titleService.leftLinksSnapshot;
         this.rightLinks = titleService.rightLinksSnapshot;
@@ -87,6 +91,19 @@ export class MainSidebarComponent extends ComponentLifecycleEventEmitter {
 
         return `(${title.badgeCount}) ${title.text}`;
 
+    }
+
+    showSearchClicked(): void {
+        if (this.showSearch == true) {
+            this.showSearch = false;
+            return;
+        }
+
+        const canActivate: any = this.loggedInGuard.canActivate();
+        if (canActivate === true)
+            this.showSearch = true;
+        else if (canActivate.then != null)
+            canActivate.then((val: boolean) => this.showSearch = val);
     }
 
 

@@ -5,7 +5,6 @@
 
     width: $desktop_side_bar_width / 2;
     height: 100%;
-    background-color: $white;
     display: flex;
     flex-direction: column;
     background-color: $brand;
@@ -31,9 +30,10 @@
 
 
 .peek-ds-mh-title {
-    max-width: $desktop_side_bar_width / 2;;
+    max-width: $desktop_side_bar_width / 2;
     word-wrap: break-word;
-    margin-top: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     background-color: $white;
     text-align: center;
     //font-size: $general_font_size_3;
