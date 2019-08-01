@@ -1,14 +1,19 @@
 import {Ng2BalloonMsgService} from "@synerty/ng2-balloon-msg";
 import {VortexService, VortexStatusService} from "@synerty/vortexjs";
-import {TitleService, FooterService, NavBackService} from "@synerty/peek-util";
+import {FooterService, NavBackService, TitleService} from "@synerty/peek-util";
 import {titleBarLinks} from "../plugin-title-bar-links";
 
+
 export function titleServiceFactory() {
-    return new TitleService(titleBarLinks);
+    const service = new TitleService();
+    service.setLinks(titleBarLinks);
+    return service;
 }
 
 export function footerServiceFactory() {
-    return new FooterService([]);
+    const service = new FooterService();
+    service.setLinks([]);
+    return service;
 }
 
 
