@@ -77,7 +77,7 @@
             </button>
         </div>
 
-        <div>
+        <div *ngIf="hasConfigLinks()">
             <button class="sidebar-button"
                     [routerLink]="['/config']"
                     nzTitle="Configuration" nzPlacement="right" nz-tooltip>

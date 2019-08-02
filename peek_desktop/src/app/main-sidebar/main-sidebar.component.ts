@@ -106,6 +106,10 @@ export class MainSidebarComponent extends ComponentLifecycleEventEmitter {
             canActivate.then((val: boolean) => this.showSearch = val);
     }
 
+    hasConfigLinks():boolean {
+        return this.configLinks != null && this.configLinks.length != 0;
+    }
+
 
 }
 
