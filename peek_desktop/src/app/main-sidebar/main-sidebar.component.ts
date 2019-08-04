@@ -62,7 +62,7 @@ export class MainSidebarComponent extends ComponentLifecycleEventEmitter {
             .takeUntil(this.onDestroyEvent)
             .subscribe(v => this.statusText = v);
 
-
+        this.configLinks = footerService.configLinksSnapshot;
         footerService.configLinks
             .takeUntil(this.onDestroyEvent)
             .subscribe(v => this.configLinks = v);
