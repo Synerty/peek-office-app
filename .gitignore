@@ -96,3 +96,6 @@ Thumbs.db
 .idea
 
 MANIFEST
+
+# Ignore sonarscanner
+.scannerwork/
