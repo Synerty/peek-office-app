@@ -99,3 +99,4 @@ MANIFEST
 
 # Ignore sonarscanner
 .scannerwork/
+.scannerwork/
