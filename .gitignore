@@ -100,3 +100,8 @@ MANIFEST
 # Ignore sonarscanner
 .scannerwork/
 .scannerwork/
+
+# Yalc
+.yalc
+.yalc/
+yalc.lock
