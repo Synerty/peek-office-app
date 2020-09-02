@@ -1,6 +1,6 @@
-import {Ng2BalloonMsgService} from "@synerty/ng2-balloon-msg";
+import { BalloonMsgService } from "@synerty/peek-plugin-base-js"
 import {VortexService, VortexStatusService} from "@synerty/vortexjs";
-import {FooterService, NavBackService, TitleService} from "@synerty/peek-util";
+import {FooterService, NavBackService, TitleService} from "@synerty/peek-plugin-base-js";
 import {titleBarLinks} from "../plugin-title-bar-links";
 
 
@@ -30,7 +30,7 @@ export let peekRootServices = [
     NavBackService,
 
     // Ng2BalloonMsg
-    Ng2BalloonMsgService,
+    BalloonMsgService,
 
     // Vortex Services
     VortexStatusService,

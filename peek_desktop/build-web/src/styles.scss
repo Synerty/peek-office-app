@@ -2,10 +2,10 @@
 
 //@import '~bootstrap/dist/less/bootstrap.less';
 //@import '~bootstrap/dist/css/bootstrap-theme.min';
-//@import '~@synerty/peek-theme/scss/layout.web';
+//@import '~@synerty/peek-plugin-base-js/src/styles/layout';
 
 
-@import '~@synerty/peek-theme/scss/variables.web';
+@import '~@synerty/peek-plugin-base-js/src/styles/variables';
 
 //sizes
 $general_border: 1.3px;
@@ -40,27 +40,27 @@ $general_margin_2: 10px;
 $general_margin_3: 16px;
 $general_margin_4: 32px;
 
-@import '~@synerty/peek-theme/scss/mixins.web';
+@import '~@synerty/peek-plugin-base-js/src/styles/mixins';
 
 *:focus {outline:none!important;}
 
 //peek screens
-@import '~@synerty/peek-theme/scss/style/_title_bar';
-@import '~@synerty/peek-theme/scss/style/_home_screen';
+@import '~@synerty/peek-plugin-base-js/src/styles/style/_title_bar';
+@import '~@synerty/peek-plugin-base-js/src/styles/style/_home_screen';
 
 //plugin screens
-@import '~@synerty/peek-theme/scss/style/_plugin_inbox';
-@import '~@synerty/peek-theme/scss/style/_plugin_chat';
+@import '~@synerty/peek-plugin-base-js/src/styles/style/_plugin_inbox';
+@import '~@synerty/peek-plugin-base-js/src/styles/style/_plugin_chat';
 
 //generic sections
-@import '~@synerty/peek-theme/scss/style/_navigation_section';
-@import '~@synerty/peek-theme/scss/style/_tabs_section';
-@import '~@synerty/peek-theme/scss/style/_mobile_dialog_section';
-@import '~@synerty/peek-theme/scss/style/_information_section';
-@import '~@synerty/peek-theme/scss/style/_details_section';
-@import '~@synerty/peek-theme/scss/style/_tables_section';
+@import '~@synerty/peek-plugin-base-js/src/styles/style/_navigation_section';
+@import '~@synerty/peek-plugin-base-js/src/styles/style/_tabs_section';
+@import '~@synerty/peek-plugin-base-js/src/styles/style/_mobile_dialog_section';
+@import '~@synerty/peek-plugin-base-js/src/styles/style/_information_section';
+@import '~@synerty/peek-plugin-base-js/src/styles/style/_details_section';
+@import '~@synerty/peek-plugin-base-js/src/styles/style/_tables_section';
 
-@import '~@synerty/peek-theme/scss/style/_general';
+@import '~@synerty/peek-plugin-base-js/src/styles/style/_general';
 
 body,
 html{

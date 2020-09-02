@@ -1,47 +1,45 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-import { NgModule } from "@angular/core";
-import { FormsModule } from "@angular/forms";
-import { NzIconModule } from "ng-zorro-antd/icon";
-import { RouterModule } from "@angular/router";
-import { HttpClientModule } from "@angular/common/http";
-import { Ng2BalloonMsgModule } from "@synerty/ng2-balloon-msg-web";
+import { BrowserModule } from "@angular/platform-browser"
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
+import { NgModule } from "@angular/core"
+import { FormsModule } from "@angular/forms"
+import { NzIconModule } from "ng-zorro-antd/icon"
+import { RouterModule } from "@angular/router"
+import { HttpClientModule } from "@angular/common/http"
+import { BalloonMsgModule } from "@synerty/peek-plugin-base-js"
 import {
     TupleActionPushOfflineSingletonService,
     TupleDataObservableNameService,
     TupleOfflineStorageNameService,
     TupleStorageFactoryService,
-    WebSqlFactoryService,
-} from "@synerty/vortexjs";
-import {
     TupleStorageFactoryServiceWeb,
     WebSqlBrowserFactoryService,
-} from "@synerty/vortexjs/index-browser";
-import { staticRoutes } from "./app/app.routes";
-import { peekRootServices } from "./app/app.services";
-import { AppComponent } from "./app/app.component";
-import { MainHomeComponent } from "./app/main-home/main-home.component";
-import { MainConfigComponent } from "./app/main-config/main-config.component";
-import { MainSidebarComponent } from "./app/main-sidebar/main-sidebar.component";
-import { UnknownRouteComponent } from "./app/unknown-route/unknown-route.component";
-import { pluginRootModules } from "./plugin-root-modules";
-import { pluginRootServices } from "./plugin-root-services";
-import { PluginRootComponent } from "./app/plugin-root.component";
-import { en_US, NgZorroAntdModule, NZ_I18N } from "ng-zorro-antd";
-import { registerLocaleData } from "@angular/common";
-import en from "@angular/common/locales/en";
-import { SearchModule } from "peek_core_search/search.module";
+    WebSqlFactoryService,
+} from "@synerty/vortexjs"
+import { staticRoutes } from "./app/app.routes"
+import { peekRootServices } from "./app/app.services"
+import { AppComponent } from "./app/app.component"
+import { MainHomeComponent } from "./app/main-home/main-home.component"
+import { MainConfigComponent } from "./app/main-config/main-config.component"
+import { MainSidebarComponent } from "./app/main-sidebar/main-sidebar.component"
+import { UnknownRouteComponent } from "./app/unknown-route/unknown-route.component"
+import { pluginRootModules } from "./plugin-root-modules"
+import { pluginRootServices } from "./plugin-root-services"
+import { PluginRootComponent } from "./app/plugin-root.component"
+import { en_US, NgZorroAntdModule, NZ_I18N } from "ng-zorro-antd"
+import { registerLocaleData } from "@angular/common"
+import en from "@angular/common/locales/en"
+import { SearchModule } from "peek_core_search/search.module"
 
-registerLocaleData(en);
+registerLocaleData(en)
 
 export function tupleDataObservableNameServiceFactory() {
     return new TupleDataObservableNameService("peek_client", {
         plugin: "peek_client",
-    });
+    })
 }
 
 export function tupleOfflineStorageNameServiceFactory() {
-    return new TupleOfflineStorageNameService("peek_client");
+    return new TupleOfflineStorageNameService("peek_client")
 }
 
 @NgModule({
@@ -61,13 +59,13 @@ export function tupleOfflineStorageNameServiceFactory() {
         HttpClientModule,
         FormsModule,
         NzIconModule,
-        Ng2BalloonMsgModule,
+        BalloonMsgModule,
         ...pluginRootModules,
         NgZorroAntdModule,
         SearchModule,
     ],
     providers: [
-        { provide: NZ_I18N, useValue: en_US },
+        {provide: NZ_I18N, useValue: en_US},
         {
             provide: WebSqlFactoryService,
             useClass: WebSqlBrowserFactoryService,
@@ -77,9 +75,10 @@ export function tupleOfflineStorageNameServiceFactory() {
             useClass: TupleStorageFactoryServiceWeb,
         },
         TupleActionPushOfflineSingletonService,
-
+        
         ...peekRootServices,
         ...pluginRootServices,
     ],
 })
-export class AppWebModule {}
+export class AppWebModule {
+}

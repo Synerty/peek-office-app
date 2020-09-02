@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {ComponentLifecycleEventEmitter} from "@synerty/vortexjs";
-import {TitleService, NavBackService} from "@synerty/peek-util";
+import {TitleService, NavBackService} from "@synerty/peek-plugin-base-js";
 
 
 @Component({
