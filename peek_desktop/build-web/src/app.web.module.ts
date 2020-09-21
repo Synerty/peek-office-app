@@ -28,7 +28,7 @@ import { PluginRootComponent } from "./app/plugin-root.component"
 import { en_US, NgZorroAntdModule, NZ_I18N } from "ng-zorro-antd"
 import { registerLocaleData } from "@angular/common"
 import en from "@angular/common/locales/en"
-import { SearchModule } from "peek_core_search/search.module"
+import { SearchModule } from "@peek/peek_core_search/search.module"
 
 registerLocaleData(en)
 

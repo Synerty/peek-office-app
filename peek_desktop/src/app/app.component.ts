@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core"
 import { VortexService, VortexStatusService } from "@synerty/vortexjs"
-import { DeviceStatusService } from "@peek/peek_core_device"
-import { UserService } from "@peek/peek_core_user"
+import { DeviceStatusService } from "@_peek/peek_core_device"
+import { UserService } from "@_peek/peek_core_user"
 import { NgLifeCycleEvents } from "@synerty/peek-plugin-base-js"
 
 @Component({

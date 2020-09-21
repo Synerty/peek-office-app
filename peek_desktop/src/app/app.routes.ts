@@ -3,8 +3,8 @@ import {UnknownRouteComponent} from "./unknown-route/unknown-route.component";
 import {pluginAppRoutes} from "../plugin-app-routes";
 import {pluginCfgRoutes} from "../plugin-cfg-routes";
 
-import {DeviceEnrolledGuard} from "@peek/peek_core_device";
-import {LoggedInGuard} from "@peek/peek_core_user";
+import {DeviceEnrolledGuard} from "@_peek/peek_core_device";
+import {LoggedInGuard} from "@_peek/peek_core_user";
 
 import {MainConfigComponent} from "./main-config/main-config.component";
 
