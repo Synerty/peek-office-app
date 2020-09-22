@@ -1,5 +1,5 @@
 import { Component } from "@angular/core"
-import { homeLinks } from "../../plugin-home-links"
+import { homeLinks } from "@peek/plugin-home-links"
 import {
     FooterService,
     IConfigLink,

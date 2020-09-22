@@ -36,6 +36,4 @@ export class AppComponent extends NgLifeCycleEvents
     showLoading(): boolean {
         return this.deviceStatusService.isLoading
     }
-    
 }
-
