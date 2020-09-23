@@ -22,13 +22,13 @@ import { MainHomeComponent } from "./app/main-home/main-home.component"
 import { MainConfigComponent } from "./app/main-config/main-config.component"
 import { MainSidebarComponent } from "./app/main-sidebar/main-sidebar.component"
 import { UnknownRouteComponent } from "./app/unknown-route/unknown-route.component"
-import { pluginRootModules } from "./plugin-root-modules"
-import { pluginRootServices } from "./plugin-root-services"
+import { pluginRootModules } from "@peek/plugin-root-modules"
+import { pluginRootServices } from "@peek/plugin-root-services"
 import { PluginRootComponent } from "./app/plugin-root.component"
 import { en_US, NgZorroAntdModule, NZ_I18N } from "ng-zorro-antd"
 import { registerLocaleData } from "@angular/common"
 import en from "@angular/common/locales/en"
-import { SearchModule } from "peek_core_search/search.module"
+import { SearchModule } from "@peek/peek_core_search/search.module"
 
 registerLocaleData(en)
 
@@ -75,10 +75,9 @@ export function tupleOfflineStorageNameServiceFactory() {
             useClass: TupleStorageFactoryServiceWeb,
         },
         TupleActionPushOfflineSingletonService,
-        
         ...peekRootServices,
         ...pluginRootServices,
     ],
 })
-export class AppWebModule {
+export class AppModule {
 }

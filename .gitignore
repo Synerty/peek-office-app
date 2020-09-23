@@ -1,75 +1,34 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-#Ignore the automatically generated files
+# Ignore the automatically generated files
 .lastHash
-**/plugin-app-routes.ts
-**/plugin-cfg-routes.ts
-**/plugin-root-services.ts
-**/plugin-root-modules.ts
-**/plugin-home-links.ts
-**/plugin-title-bar-links.ts
-**/plugin-config-links.ts
-**/plugin-root.component.ns.html
-**/plugin-root.component.web.html
-**/peek_plugin_*
-**/peek_core_*
-**/build-ns/app/app/
-**/build-web/src/app/
-**/build-web/src/@synerty/ng2-balloon-msg
-**/build-web/src/@synerty/peek-util
-
-# Ignore the CSS files that we have SCSS files for
-# NativeScript
-app.ios.css
-app.android.css
-app.css
-_app-common.css
-
-# HTML
-**/build-web/src/styles.css
-
+@peek/
+@_peek/
 
 # Ignore python compiled files
 *.pyc
 __pycache__
+__pycache__/
+*.egg-info/
 
-# Nativescript stuff
+# Web
 npm-debug.log
 .DS_Store
-
-peek_desktop/build-ns/app/**/*.js
-peek_desktop/build-ns/app/**/*.js.map
-peek_desktop/build-web/src/**/*.js
-peek_desktop/build-web/src/**/*.js.map
-peek_desktop/src/**/*.js
-peek_desktop/src/*.js.map
 hooks
 lib/
 node_modules/
+dist
+/tmp
 platforms
 tmp/
 typings/
 **/out-tsc
-
-# Ignore pycharm project settings
-.idea
-
 dist/
 build/
-*.egg-info/
-
-# compiled output
-dist
-/tmp
-
-# Ignore compiled python files
-__pycache__/
-
-# dependencies
-node_modules
 /bower_components
 
 # IDEs and editors
+.idea
 /.vscode
 .project
 .classpath

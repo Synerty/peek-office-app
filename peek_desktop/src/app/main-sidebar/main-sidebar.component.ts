@@ -1,8 +1,15 @@
 import { Component } from "@angular/core"
-import { homeLinks } from "../../plugin-home-links"
-import { IConfigLink, FooterService, NavBackService, ITitleBarLink, TitleService } from "@synerty/peek-plugin-base-js"
-import { ComponentLifecycleEventEmitter, VortexStatusService } from "@synerty/vortexjs"
-import { LoggedInGuard } from "@peek/peek_core_user"
+import { homeLinks } from "@peek/plugin-home-links"
+import {
+    FooterService,
+    IConfigLink,
+    ITitleBarLink,
+    NgLifeCycleEvents,
+    NavBackService,
+    TitleService
+} from "@synerty/peek-plugin-base-js"
+import { VortexStatusService } from "@synerty/vortexjs"
+import { LoggedInGuard } from "@_peek/peek_core_user"
 
 @Component({
     selector: "peek-main-sidebar",
@@ -10,8 +17,7 @@ import { LoggedInGuard } from "@peek/peek_core_user"
     styleUrls: ["main-sidebar.component.dweb.scss"],
     moduleId: module.id
 })
-export class MainSidebarComponent extends ComponentLifecycleEventEmitter {
-    
+export class MainSidebarComponent extends NgLifeCycleEvents {
     appDetails = homeLinks
     title: string = "Peek"
     isEnabled: boolean = true
@@ -19,6 +25,7 @@ export class MainSidebarComponent extends ComponentLifecycleEventEmitter {
     configLinks: IConfigLink[] = []
     statusText: string = ""
     showSearch = false
+    
     private leftLinks = []
     private rightLinks = []
     

@@ -1,11 +1,8 @@
-import {Component, OnInit} from "@angular/core";
-import {
-    ComponentLifecycleEventEmitter,
-    VortexService,
-    VortexStatusService
-} from "@synerty/vortexjs";
-import {DeviceStatusService} from "@peek/peek_core_device"
-import {UserService} from "@peek/peek_core_user";
+import { Component, OnInit } from "@angular/core"
+import { VortexService, VortexStatusService } from "@synerty/vortexjs"
+import { DeviceStatusService } from "@_peek/peek_core_device"
+import { UserService } from "@_peek/peek_core_user"
+import { NgLifeCycleEvents } from "@synerty/peek-plugin-base-js"
 
 @Component({
     selector: "peek-main-app",
@@ -13,31 +10,30 @@ import {UserService} from "@peek/peek_core_user";
     styleUrls: ["app.component.dweb.scss"],
     moduleId: module.id
 })
-export class AppComponent extends ComponentLifecycleEventEmitter
+export class AppComponent extends NgLifeCycleEvents
     implements OnInit { // Root component
-
-    loggedIn = false;
-
-    constructor(private vortexService: VortexService,
-                private vortexStatusService: VortexStatusService,
-                private deviceStatusService: DeviceStatusService,
-                userService: UserService) {
-        super();
-
-
-        this.loggedIn = userService.loggedIn;
+    
+    loggedIn = false
+    
+    constructor(
+        private vortexService: VortexService,
+        private vortexStatusService: VortexStatusService,
+        private deviceStatusService: DeviceStatusService,
+        userService: UserService
+    ) {
+        super()
+        
+        this.loggedIn = userService.loggedIn
         userService.loggedInStatus
             .takeUntil(this.onDestroyEvent)
-            .subscribe(v => this.loggedIn = v);
-
+            .subscribe(v => this.loggedIn = v)
+        
     }
-
+    
     ngOnInit() {
     }
-
+    
     showLoading(): boolean {
-        return this.deviceStatusService.isLoading;
+        return this.deviceStatusService.isLoading
     }
-
 }
-
