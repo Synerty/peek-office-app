@@ -19,7 +19,7 @@ export class AppComponent extends NgLifeCycleEvents
         private vortexService: VortexService,
         private vortexStatusService: VortexStatusService,
         private deviceStatusService: DeviceStatusService,
-        userService: UserService
+        public userService: UserService,
     ) {
         super()
         
