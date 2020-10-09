@@ -1,5 +1,5 @@
 import { Component } from "@angular/core"
-import { homeLinks } from "@peek/plugin-home-links"
+import { homeLinks } from "@_peek/plugin-home-links"
 import {
     FooterService,
     IConfigLink,
@@ -9,7 +9,7 @@ import {
     TitleService
 } from "@synerty/peek-plugin-base-js"
 import { VortexStatusService } from "@synerty/vortexjs"
-import { LoggedInGuard } from "@_peek/peek_core_user"
+import { LoggedInGuard } from "@peek/peek_core_user"
 
 @Component({
     selector: "peek-main-sidebar",

@@ -2,8 +2,8 @@
 
 # Ignore the automatically generated files
 .lastHash
-@peek/
 @_peek/
+@peek/
 
 # Ignore python compiled files
 *.pyc

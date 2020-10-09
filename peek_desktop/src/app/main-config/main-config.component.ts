@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import { TitleService } from "@synerty/peek-plugin-base-js"
-import {configLinks} from "@peek/plugin-config-links";
+import {configLinks} from "@_peek/plugin-config-links";
 
 
 @Component({

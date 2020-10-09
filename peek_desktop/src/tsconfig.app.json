@@ -7,8 +7,8 @@
             "jquery"
         ],
         "paths": {
-          "@_peek/*": [ "@_peek/*" ],
-          "@peek/*": [ "@peek/*" ]
+          "@peek/*": [ "@peek/*" ],
+          "@_peek/*": [ "@_peek/*" ]
         }
     },
     "exclude": [
