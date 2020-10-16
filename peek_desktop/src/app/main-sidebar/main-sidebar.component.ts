@@ -101,10 +101,5 @@ export class MainSidebarComponent extends NgLifeCycleEvents {
         else if (canActivate.then != null)
             canActivate.then((val: boolean) => this.showSearch = val)
     }
-    
-    hasConfigLinks(): boolean {
-        return this.configLinks != null && this.configLinks.length != 0
-    }
-    
 }
 
