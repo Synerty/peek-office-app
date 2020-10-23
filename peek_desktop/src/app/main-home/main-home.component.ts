@@ -1,5 +1,5 @@
 import { Component } from "@angular/core"
-import { NavBackService, NgLifeCycleEvents, TitleService } from "@synerty/peek-plugin-base-js"
+import { NavBackService, NgLifeCycleEvents, HeaderService } from "@synerty/peek-plugin-base-js"
 
 @Component({
     selector: "peek-main-home",
@@ -10,12 +10,12 @@ import { NavBackService, NgLifeCycleEvents, TitleService } from "@synerty/peek-p
 export class MainHomeComponent extends NgLifeCycleEvents {
     
     constructor(
-        titleService: TitleService,
+        headerService: HeaderService,
         public navBackService: NavBackService
     ) {
         super()
         
-        titleService.setTitle("Peek Home")
+        headerService.setTitle("Peek Home")
     }
     
 }

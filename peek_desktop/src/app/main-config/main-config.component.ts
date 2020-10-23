@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import { TitleService } from "@synerty/peek-plugin-base-js"
+import { HeaderService } from "@synerty/peek-plugin-base-js"
 import {configLinks} from "@_peek/plugin-config-links";
 
 
@@ -12,8 +12,8 @@ export class MainConfigComponent {
 
     appDetails = configLinks;
 
-    constructor(titleService: TitleService) {
-        titleService.setTitle("Peek Config");
+    constructor(headerService: HeaderService) {
+        headerService.setTitle("Peek Config");
 
     }
 

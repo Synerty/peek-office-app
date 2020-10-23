@@ -3,10 +3,10 @@ import { homeLinks } from "@_peek/plugin-home-links"
 import {
     FooterService,
     IConfigLink,
-    ITitleBarLink,
+    IHeaderLink,
     NgLifeCycleEvents,
     NavBackService,
-    TitleService
+    HeaderService
 } from "@synerty/peek-plugin-base-js"
 import { VortexStatusService } from "@synerty/vortexjs"
 import { LoggedInGuard } from "@peek/peek_core_user"
@@ -32,24 +32,24 @@ export class MainSidebarComponent extends NgLifeCycleEvents {
     constructor(
         vortexStatusService: VortexStatusService,
         footerService: FooterService,
-        titleService: TitleService,
+        headerService: HeaderService,
         private navBackService: NavBackService,
         private loggedInGuard: LoggedInGuard
     ) {
         super()
-        this.leftLinks = titleService.leftLinksSnapshot
-        this.rightLinks = titleService.rightLinksSnapshot
+        this.leftLinks = headerService.leftLinksSnapshot
+        this.rightLinks = headerService.rightLinksSnapshot
         
-        titleService.title.takeUntil(this.onDestroyEvent)
+        headerService.title.takeUntil(this.onDestroyEvent)
             .subscribe(v => this.title = v)
         
-        titleService.isEnabled.takeUntil(this.onDestroyEvent)
+        headerService.isEnabled.takeUntil(this.onDestroyEvent)
             .subscribe(v => this.isEnabled = v)
         
-        titleService.leftLinks.takeUntil(this.onDestroyEvent)
+        headerService.leftLinks.takeUntil(this.onDestroyEvent)
             .subscribe(v => this.leftLinks = v)
         
-        titleService.rightLinks.takeUntil(this.onDestroyEvent)
+        headerService.rightLinks.takeUntil(this.onDestroyEvent)
             .subscribe(v => this.rightLinks = v)
         
         vortexStatusService.isOnline.takeUntil(this.onDestroyEvent)
@@ -76,7 +76,7 @@ export class MainSidebarComponent extends NgLifeCycleEvents {
         return this.navBackService.navBackLen() != 0
     }
     
-    linkTitle(title: ITitleBarLink) {
+    linkTitle(title: IHeaderLink) {
         if (title.badgeCount == null) {
             return title.text
         }
