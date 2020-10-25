@@ -13,8 +13,8 @@
                 [disabled]="!isBackButtonEnabled()"
                 [class.button-disabled]="!isBackButtonEnabled()"
                 (click)="navBackService.navBack()"
-                nzTitle="Back to Last Page"
-                nzPlacement="right"
+                nzTooltipTitle="Back to Last Page"
+                nzTooltipPlacement="right"
                 nz-tooltip
             >
                 <i nz-icon nzType="left" nzTheme="outline"></i>
@@ -25,8 +25,8 @@
             <button
                 class="sidebar-button"
                 (click)="showSearchClicked()"
-                nzTitle="Search for Anything"
-                nzPlacement="right"
+                nzTooltipTitle="Search for Anything"
+                nzTooltipPlacement="right"
                 nz-tooltip
             >
                 <i nz-icon nzType="search" nzTheme="outline"></i>
@@ -63,8 +63,8 @@
             <button
                 class="sidebar-button"
                 [routerLink]="[app.resourcePath]"
-                [nzTitle]="app.title"
-                nzPlacement="right"
+                [nzTooltipTitle]="app.title"
+                nzTooltipPlacement="right"
                 nz-tooltip
             >
                 <img class="sidebar-button-img" [src]="[app.pluginIconPath]" />
@@ -77,8 +77,8 @@
             <button
                 class="sidebar-button"
                 [routerLink]="['/peek_core_user']"
-                nzTitle="Login / Logout"
-                nzPlacement="right"
+                nzTooltipTitle="Login / Logout"
+                nzTooltipPlacement="right"
                 nz-tooltip
             >
                 <i nz-icon nzType="user" nzTheme="outline"></i>
@@ -89,8 +89,8 @@
             <button
                 class="sidebar-button"
                 [routerLink]="['/config']"
-                nzTitle="Configuration"
-                nzPlacement="right"
+                nzTooltipTitle="Configuration"
+                nzTooltipPlacement="right"
                 nz-tooltip
             >
                 <i nz-icon nzType="setting" nzTheme="outline"></i>
@@ -100,8 +100,8 @@
         <div
             [routerLink]="['/']"
             nz-tooltip
-            [nzTitle]="poweredByTemplate"
-            nzPlacement="rightTop"
+            [nzTooltipTitle]="poweredByTemplate"
+            nzTooltipPlacement="rightTop"
         >
             <img class="sidebar-powered-by" src="/assets/home-center.png" />
         </div>
