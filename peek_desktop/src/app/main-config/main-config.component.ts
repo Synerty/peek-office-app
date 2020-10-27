@@ -5,8 +5,7 @@ import {configLinks} from "@_peek/plugin-config-links";
 
 @Component({
     selector: "peek-main-config",
-    templateUrl: 'main-config.component.dweb.html',
-    moduleId: module.id
+    templateUrl: 'main-config.component.dweb.html'
 })
 export class MainConfigComponent {
 

@@ -1,8 +1,7 @@
 import {Component} from "@angular/core";
 
 @Component({
-    templateUrl: 'unknown-route.component.dweb.html',
-    moduleId: module.id
+    templateUrl: 'unknown-route.component.dweb.html'
 })
 export class UnknownRouteComponent {
 

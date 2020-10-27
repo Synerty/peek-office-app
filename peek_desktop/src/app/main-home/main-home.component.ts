@@ -4,8 +4,7 @@ import { NavBackService, NgLifeCycleEvents, HeaderService } from "@synerty/peek-
 @Component({
     selector: "peek-main-home",
     templateUrl: "main-home.component.dweb.html",
-    styleUrls: ["main-home.component.dweb.scss"],
-    moduleId: module.id
+    styleUrls: ["main-home.component.dweb.scss"]
 })
 export class MainHomeComponent extends NgLifeCycleEvents {
     

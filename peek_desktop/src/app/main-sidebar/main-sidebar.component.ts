@@ -15,8 +15,7 @@ import { filter, map } from "rxjs/operators"
 @Component({
     selector: "peek-main-sidebar",
     templateUrl: "main-sidebar.component.dweb.html",
-    styleUrls: ["main-sidebar.component.dweb.scss"],
-    moduleId: module.id
+    styleUrls: ["main-sidebar.component.dweb.scss"]
 })
 export class MainSidebarComponent extends NgLifeCycleEvents {
     appDetails = homeLinks

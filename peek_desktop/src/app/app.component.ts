@@ -7,8 +7,7 @@ import { NgLifeCycleEvents } from "@synerty/peek-plugin-base-js"
 @Component({
     selector: "peek-main-app",
     templateUrl: "app.component.dweb.html",
-    styleUrls: ["app.component.dweb.scss"],
-    moduleId: module.id
+    styleUrls: ["app.component.dweb.scss"]
 })
 export class AppComponent extends NgLifeCycleEvents
     implements OnInit { // Root component
