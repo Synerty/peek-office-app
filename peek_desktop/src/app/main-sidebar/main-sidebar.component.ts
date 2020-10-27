@@ -10,6 +10,7 @@ import {
 } from "@synerty/peek-plugin-base-js"
 import { VortexStatusService } from "@synerty/vortexjs"
 import { LoggedInGuard } from "@peek/peek_core_user"
+import { filter, map } from "rxjs/operators"
 
 @Component({
     selector: "peek-main-sidebar",
@@ -26,31 +27,26 @@ export class MainSidebarComponent extends NgLifeCycleEvents {
     statusText: string = ""
     showSearch = false
     
-    private leftLinks = []
-    private rightLinks = []
+    leftLinks$ = this.headerService.links$.pipe(map(
+        links => links.filter(link => !!link.left))
+    )
+    rightLinks$ = this.headerService.links$.pipe(map(
+    links => links.filter(link => !link.left)))
     
     constructor(
-        vortexStatusService: VortexStatusService,
-        footerService: FooterService,
-        headerService: HeaderService,
+        private vortexStatusService: VortexStatusService,
+        private footerService: FooterService,
+        private headerService: HeaderService,
         private navBackService: NavBackService,
         private loggedInGuard: LoggedInGuard
     ) {
         super()
-        this.leftLinks = headerService.leftLinksSnapshot
-        this.rightLinks = headerService.rightLinksSnapshot
         
-        headerService.title.takeUntil(this.onDestroyEvent)
+        headerService.title$.takeUntil(this.onDestroyEvent)
             .subscribe(v => this.title = v)
         
-        headerService.isEnabled.takeUntil(this.onDestroyEvent)
+        headerService.isEnabled$.takeUntil(this.onDestroyEvent)
             .subscribe(v => this.isEnabled = v)
-        
-        headerService.leftLinks.takeUntil(this.onDestroyEvent)
-            .subscribe(v => this.leftLinks = v)
-        
-        headerService.rightLinks.takeUntil(this.onDestroyEvent)
-            .subscribe(v => this.rightLinks = v)
         
         vortexStatusService.isOnline.takeUntil(this.onDestroyEvent)
             .subscribe(v => this.vortexIsOnline = v)
@@ -64,9 +60,6 @@ export class MainSidebarComponent extends NgLifeCycleEvents {
             .takeUntil(this.onDestroyEvent)
             .subscribe(v => this.configLinks = v)
         
-    }
-    
-    ngOnInit() {
     }
     
     // ------------------------------

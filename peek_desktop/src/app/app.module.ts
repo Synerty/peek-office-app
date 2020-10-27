@@ -2,7 +2,10 @@ import { BrowserModule } from "@angular/platform-browser"
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
 import { NgModule } from "@angular/core"
 import { FormsModule } from "@angular/forms"
+import { NzAlertModule } from 'ng-zorro-antd/alert'
 import { NzIconModule } from "ng-zorro-antd/icon"
+import { NzToolTipModule } from 'ng-zorro-antd/tooltip'
+import { NzButtonModule } from 'ng-zorro-antd/button'
 import { RouterModule } from "@angular/router"
 import { HttpClientModule } from "@angular/common/http"
 import { BalloonMsgModule } from "@synerty/peek-plugin-base-js"
@@ -61,8 +64,10 @@ export function tupleOfflineStorageNameServiceFactory() {
         NzIconModule,
         BalloonMsgModule,
         ...pluginRootModules,
-        NgZorroAntdModule,
         SearchModule,
+        NzAlertModule,
+        NzToolTipModule,
+        NzButtonModule,
     ],
     providers: [
         {provide: NZ_I18N, useValue: en_US},

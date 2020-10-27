@@ -35,13 +35,13 @@
             <plugin-search [(showSearch)]="showSearch"></plugin-search>
         </div>
 
-        <div *ngFor="let link of leftLinks">
+        <div *ngFor="let link of leftLinks$ | async">
             <button class="sidebar-button" [routerLink]="[link.resourcePath]">
                 {{linkTitle(link)}}
             </button>
         </div>
 
-        <div *ngFor="let link of rightLinks">
+        <div *ngFor="let link of rightLinks$ | async">
             <button class="sidebar-button" [routerLink]="[link.resourcePath]">
                 {{linkTitle(link)}}
             </button>
@@ -49,7 +49,7 @@
         <div>
             <button
                 class="sidebar-button"
-                *ngFor="let link of rightLinks"
+                *ngFor="let link of rightLinks$ | async"
                 [routerLink]="[link.resourcePath]"
             >
                 {{linkTitle(link)}}
