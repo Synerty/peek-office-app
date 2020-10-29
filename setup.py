@@ -5,8 +5,8 @@ from subprocess import CalledProcessError
 
 from setuptools import setup, find_packages
 
-pip_package_name = "peek-desktop"
-py_package_name = "peek_desktop"
+pip_package_name = "peek-office-app"
+py_package_name = "peek_office_app"
 
 package_version = '0.0.0'
 

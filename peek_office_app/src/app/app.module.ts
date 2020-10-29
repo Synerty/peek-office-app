@@ -36,13 +36,13 @@ import { SearchModule } from "@_peek/peek_core_search/search.module"
 registerLocaleData(en)
 
 export function tupleDataObservableNameServiceFactory() {
-    return new TupleDataObservableNameService("peek_client", {
-        plugin: "peek_client",
+    return new TupleDataObservableNameService("peek_office_service", {
+        plugin: "peek_office_service",
     })
 }
 
 export function tupleOfflineStorageNameServiceFactory() {
-    return new TupleOfflineStorageNameService("peek_client")
+    return new TupleOfflineStorageNameService("peek_office_service")
 }
 
 @NgModule({

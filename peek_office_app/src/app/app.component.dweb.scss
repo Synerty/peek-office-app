@@ -1,11 +1,11 @@
 @import '~@synerty/peek-plugin-base-js/src/styles/_variables';
 
-.peek-desktop-row {
+.peek-office-app-row {
     display: flex;
     height: 100%;
 }
 
-.peek-desktop-sidebar {
+.peek-office-app-sidebar {
     // Set the flexbox sixe
     flex-grow: 0;
     flex-shrink: 0;
@@ -16,11 +16,11 @@
     height: 100%;
 }
 
-.peek-desktop-sidebar-hidden {
+.peek-office-app-sidebar-hidden {
     display:none;
 }
 
-.peek-desktop-sidebar-inner {
+.peek-office-app-sidebar-inner {
 
     overflow-y: auto;
 
@@ -38,7 +38,7 @@
     padding-right: 100px;
 }
 
-.peek-desktop-content {
+.peek-office-app-content {
     flex-grow: 1;
     overflow-y: auto;
 }

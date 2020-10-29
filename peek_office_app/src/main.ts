@@ -7,7 +7,7 @@ import { AppModule } from "./app/app.module"
 const protocol = location.protocol.toLowerCase() === "https:" ? "wss" : "ws"
 
 VortexService.setVortexUrl(`${protocol}://${location.hostname}:${location.port}/vortexws`)
-VortexService.setVortexClientName("peek-desktop")
+VortexService.setVortexClientName("peek-office-app")
 
 if (environment.production) {
     enableProdMode()

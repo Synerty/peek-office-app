@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "peek-desktop": {
+        "peek-office-app": {
             "root": "",
             "sourceRoot": "src",
             "projectType": "application",
@@ -61,18 +61,18 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "peek-desktop:build"
+                        "browserTarget": "peek-office-app:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "peek-desktop:build:production"
+                            "browserTarget": "peek-office-app:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "peek-desktop:build"
+                        "browserTarget": "peek-office-app:build"
                     }
                 },
                 "test": {
@@ -121,7 +121,7 @@
                 }
             }
         },
-        "peek-desktop-e2e": {
+        "peek-office-app-e2e": {
             "root": "",
             "sourceRoot": "e2e",
             "projectType": "application",
@@ -130,7 +130,7 @@
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
                         "protractorConfig": "./protractor.conf.js",
-                        "devServerTarget": "peek-desktop:serve"
+                        "devServerTarget": "peek-office-app:serve"
                     }
                 },
                 "lint": {
@@ -145,7 +145,7 @@
             }
         }
     },
-    "defaultProject": "peek-desktop",
+    "defaultProject": "peek-office-app",
     "schematics": {
         "@schematics/angular:component": {
             "prefix": "app",
