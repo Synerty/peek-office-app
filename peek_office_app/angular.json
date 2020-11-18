@@ -30,7 +30,8 @@
                             "node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
                             "node_modules/@synerty/peek-plugin-base-js/src/styles/layout.scss",
                             "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-                            "src/styles.scss"
+                            "src/styles.scss",
+                            "src/_variables.scss"
                         ],
                         "scripts": [
                             "node_modules/jquery/dist/jquery.slim.js",
