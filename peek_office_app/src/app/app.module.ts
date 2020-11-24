@@ -2,10 +2,6 @@ import { BrowserModule } from "@angular/platform-browser"
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
 import { NgModule } from "@angular/core"
 import { FormsModule } from "@angular/forms"
-import { NzAlertModule } from 'ng-zorro-antd/alert'
-import { NzIconModule } from "ng-zorro-antd/icon"
-import { NzToolTipModule } from 'ng-zorro-antd/tooltip'
-import { NzButtonModule } from 'ng-zorro-antd/button'
 import { RouterModule } from "@angular/router"
 import { HttpClientModule } from "@angular/common/http"
 import { BalloonMsgModule } from "@synerty/peek-plugin-base-js"
@@ -20,11 +16,7 @@ import {
 } from "@synerty/vortexjs"
 import { staticRoutes } from "./app.routes"
 import { peekRootServices } from "./app.services"
-import { AppComponent } from "./app.component"
-import { MainHomeComponent } from "./main-home/main-home.component"
-import { MainConfigComponent } from "./main-config/main-config.component"
-import { MainSidebarComponent } from "./main-sidebar/main-sidebar.component"
-import { UnknownRouteComponent } from "./unknown-route/unknown-route.component"
+import { AppComponent } from "./core/components/app"
 import { pluginRootModules } from "../@_peek/plugin-root-modules"
 import { pluginRootServices } from "@_peek/plugin-root-services"
 import { PluginRootComponent } from "./plugin-root.component"
@@ -32,6 +24,8 @@ import { en_US, NZ_I18N } from "ng-zorro-antd/i18n"
 import { registerLocaleData } from "@angular/common"
 import en from "@angular/common/locales/en"
 import { SearchModule } from "@_peek/peek_core_search/search.module"
+import { PagesModule } from "./pages/pages.module"
+import { ComponentsModule } from "./core/components"
 
 registerLocaleData(en)
 
@@ -48,10 +42,6 @@ export function tupleOfflineStorageNameServiceFactory() {
 @NgModule({
     declarations: [
         AppComponent,
-        MainHomeComponent,
-        MainConfigComponent,
-        MainSidebarComponent,
-        UnknownRouteComponent,
         PluginRootComponent,
     ],
     bootstrap: [AppComponent],
@@ -61,13 +51,11 @@ export function tupleOfflineStorageNameServiceFactory() {
         BrowserAnimationsModule,
         HttpClientModule,
         FormsModule,
-        NzIconModule,
         BalloonMsgModule,
         ...pluginRootModules,
         SearchModule,
-        NzAlertModule,
-        NzToolTipModule,
-        NzButtonModule,
+        PagesModule,
+        ComponentsModule,
     ],
     providers: [
         {provide: NZ_I18N, useValue: en_US},

@@ -1,10 +1,23 @@
-$background-color: #f0f2f5;
-$container-background-color: #fff;
-$box-shadow: 1px 3px 11px rgba(0, 0, 0, 0.35);
-$border-color: rgba(0,0,0,.1);
 $header-height: 56px;
-$primary-color: #26abe2;
 $icon-size: 20px;
+
+$semi-bold: 500;
+$bold: 600;
+
+$background-color: #fafafa;
+$container-background-color: #fff;
+
+$border-color: rgba(0,0,0,.06);
+
 $font-color-primary: rgba(0,0,0,.85);
+$font-color-secondary: rgba(0,0,0,.45);
+
 $disabled-color: rgba(0,0,0,.3);
 $disabled-background-color: #eee;
+
+$primary-color: #26abe2;
+$primary-color-translucent: rgba(38, 171, 226, .1);
+$red-color: #f84d4f;
+
+$box-shadow: 0 10px 30px -6px rgba(0, 0, 0, 0.08);
+$red-box-shadow: 0 10px 30px -6px #f84d4f;
