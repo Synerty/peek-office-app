@@ -1,39 +1,38 @@
-import { Component } from "@angular/core"
+import { ChangeDetectionStrategy, Component } from "@angular/core"
 import { homeLinks } from "@_peek/plugin-home-links"
 import {
     FooterService,
+    HeaderService,
     IConfigLink,
     IHeaderLink,
-    NgLifeCycleEvents,
     NavBackService,
-    HeaderService
+    NgLifeCycleEvents
 } from "@synerty/peek-plugin-base-js"
-import { VortexStatusService } from "@synerty/vortexjs"
 import { LoggedInGuard } from "@peek/peek_core_user"
-import { filter, map } from "rxjs/operators"
+import { map } from "rxjs/operators"
+import { BehaviorSubject } from "rxjs"
 
 @Component({
-    selector: "peek-main-sidebar",
-    templateUrl: "main-sidebar.component.dweb.html",
-    styleUrls: ["main-sidebar.component.dweb.scss"]
+    selector: "sidebar-component",
+    templateUrl: "sidebar.component.html",
+    styleUrls: ["sidebar.component.scss"],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainSidebarComponent extends NgLifeCycleEvents {
-    appDetails = homeLinks
-    title: string = "Peek"
-    isEnabled: boolean = true
-    vortexIsOnline: boolean = false
+export class SidebarComponent extends NgLifeCycleEvents {
+    homeLinks = homeLinks
     configLinks: IConfigLink[] = []
-    statusText: string = ""
-    showSearch = false
     
+    showSearch$ = new BehaviorSubject<boolean>(false)
+    title$ = new BehaviorSubject<string>("Peek")
+    statusText$ = new BehaviorSubject<string>("")
+    isEnabled$ = new BehaviorSubject<boolean>(true)
     leftLinks$ = this.headerService.links$.pipe(map(
         links => links.filter(link => !!link.left))
     )
     rightLinks$ = this.headerService.links$.pipe(map(
-    links => links.filter(link => !link.left)))
+        links => links.filter(link => !link.left)))
     
     constructor(
-        private vortexStatusService: VortexStatusService,
         private footerService: FooterService,
         private headerService: HeaderService,
         private navBackService: NavBackService,
@@ -41,24 +40,53 @@ export class MainSidebarComponent extends NgLifeCycleEvents {
     ) {
         super()
         
-        headerService.title$.takeUntil(this.onDestroyEvent)
+        this.headerService.title$.takeUntil(this.onDestroyEvent)
             .subscribe(v => this.title = v)
         
-        headerService.isEnabled$.takeUntil(this.onDestroyEvent)
+        this.headerService.isEnabled$.takeUntil(this.onDestroyEvent)
             .subscribe(v => this.isEnabled = v)
         
-        vortexStatusService.isOnline.takeUntil(this.onDestroyEvent)
-            .subscribe(v => this.vortexIsOnline = v)
-        
-        footerService.statusText
+        this.footerService.statusText
             .takeUntil(this.onDestroyEvent)
             .subscribe(v => this.statusText = v)
         
         this.configLinks = footerService.configLinksSnapshot
-        footerService.configLinks
+        
+        this.footerService.configLinks
             .takeUntil(this.onDestroyEvent)
             .subscribe(v => this.configLinks = v)
-        
+    }
+    
+    get showSearch() {
+        return this.showSearch$.getValue()
+    }
+    
+    set showSearch(value) {
+        this.showSearch$.next(value)
+    }
+    
+    get isEnabled() {
+        return this.isEnabled$.getValue()
+    }
+    
+    set isEnabled(value) {
+        this.isEnabled$.next(value)
+    }
+    
+    get statusText() {
+        return this.statusText$.getValue()
+    }
+    
+    set statusText(value) {
+        this.statusText$.next(value)
+    }
+    
+    get title() {
+        return this.title$.getValue()
+    }
+    
+    set title(value) {
+        this.title$.next(value)
     }
     
     // ------------------------------
