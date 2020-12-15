@@ -5,10 +5,25 @@ from subprocess import CalledProcessError
 
 from setuptools import setup, find_packages
 
-pip_package_name = "peek-office-app"
-py_package_name = "peek_office_app"
+###############################################################################
+# Define variables
+#
+# Modify these values to fork a new plugin
+#
 
+author = "Synerty"
+author_email = 'contact@synerty.com'
+py_package_name = "peek_office_app"
+pip_package_name = py_package_name.replace('_', '-')
 package_version = '0.0.0'
+description = 'Peek Office UI App.'
+
+download_url = 'https://bitbucket.org/synerty/%s/get/%s.zip'
+download_url %= pip_package_name, package_version
+url = 'https://bitbucket.org/synerty/%s' % pip_package_name
+
+###############################################################################
+# Customise the package file finder code
 
 egg_info = "%s.egg-info" % pip_package_name
 if os.path.isdir(egg_info):
@@ -49,20 +64,38 @@ def find_package_files():
 
 package_files = find_package_files()
 
+###############################################################################
+# Define the dependencies
+
+# Ensure the dependency is the same major number
+# and no older then this version
+
+requirements = [
+]
+
+# Force the dependencies to be the same branch
+reqVer = '.'.join(package_version.split('.')[0:2]) + ".*"
+
+# >=2.0.*,>=2.0.6
+requirements = ["%s==%s,>=%s" % (pkg, reqVer, package_version)
+                if pkg.startswith("peek") else pkg
+                for pkg in requirements]
+
+###############################################################################
+# Call the setuptools
+
 setup(
     name=pip_package_name,
     packages=find_packages(exclude=["*.tests", "*.tests.*", "tests.*", "tests"]),
     package_data={'': package_files},
-    install_requires=[],
-    zip_safe=False, version=package_version,
-    description='Peek Platform - desktop Service (Frontend)',
-    author='Synerty',
-    author_email='contact@synerty.com',
-    url='https://github.com/Synerty/%s' % pip_package_name,
-    download_url='https://github.com/Synerty/%s/tarball/%s' % (
-        pip_package_name, package_version),
+    install_requires=requirements,
+    zip_safe=False,
+    version=package_version,
+    description=description,
+    author=author,
+    author_email=author_email,
+    url=url,
+    download_url=download_url,
     keywords=['Peek', 'Python', 'Platform', 'synerty'],
-    classifiers=[
-        "Programming Language :: Python :: 3.6",
-    ],
+    classifiers=[],
 )
