@@ -71,6 +71,7 @@ package_files = find_package_files()
 # and no older then this version
 
 requirements = [
+    "peek-plugin-base"
 ]
 
 # Force the dependencies to be the same branch
