@@ -3,7 +3,6 @@
 PY_PACKAGE="peek_office_app"
 PYPI_PUBLISH="1"
 
-
 VER_FILES_TO_COMMIT=""
 
 VER_FILES=""

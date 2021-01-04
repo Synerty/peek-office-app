@@ -1,110 +1,116 @@
-<div class="peek-ds-main-header" *ngIf="isEnabled$ | async">
-  <div class="sidebar-top">
-    <div class="peek-ds-mh-title">
-      {{title$ | async}}
+<div *ngIf="isEnabled$ | async" class="peek-ds-main-header">
+    <div class="sidebar-top">
+        <div class="peek-ds-mh-title">
+            {{title$ | async}}
+        </div>
+        
+        <div>
+            <button
+                (click)="navBackService.navBack()"
+                [class.button-disabled]="!isBackButtonEnabled()"
+                [disabled]="!isBackButtonEnabled()"
+                class="sidebar-button"
+                nz-tooltip
+                nzTooltipPlacement="right"
+                nzTooltipTitle="Back to Last Page"
+            >
+                <i nz-icon nzTheme="outline" nzType="left"></i>
+            </button>
+        </div>
+        
+        <div>
+            <button
+                (click)="showSearchClicked()"
+                class="sidebar-button"
+                nz-tooltip
+                nzTooltipPlacement="right"
+                nzTooltipTitle="Search for Anything"
+            >
+                <i nz-icon nzTheme="outline" nzType="search"></i>
+            </button>
+            
+            <plugin-search [(showSearch)]="showSearch"></plugin-search>
+        </div>
+        
+        <div *ngFor="let link of leftLinks$ | async">
+            <button [routerLink]="[link.resourcePath]" class="sidebar-button">
+                {{linkTitle(link)}}
+            </button>
+        </div>
+        
+        <div *ngFor="let link of rightLinks$ | async">
+            <button [routerLink]="[link.resourcePath]" class="sidebar-button">
+                {{linkTitle(link)}}
+            </button>
+        </div>
+        <div>
+            <button
+                *ngFor="let link of rightLinks$ | async"
+                [routerLink]="[link.resourcePath]"
+                class="sidebar-button"
+            >
+                {{linkTitle(link)}}
+            </button>
+        </div>
+        <div *ngIf="!homeLinks.length" class="title h3">
+            No Plugins Installed
+        </div>
+        
+        <div *ngFor="let link of homeLinks">
+            <button
+                [nzTooltipTitle]="link.title"
+                [routerLink]="[link.resourcePath]"
+                class="sidebar-button"
+                nz-tooltip
+                nzTooltipPlacement="right"
+            >
+                <img [src]="[link.pluginIconPath]" class="sidebar-button-img" />
+            </button>
+        </div>
     </div>
     
-    <div>
-      <button
-        class="sidebar-button"
-        [disabled]="!isBackButtonEnabled()"
-        [class.button-disabled]="!isBackButtonEnabled()"
-        (click)="navBackService.navBack()"
-        nzTooltipTitle="Back to Last Page"
-        nzTooltipPlacement="right"
-        nz-tooltip
-      >
-        <i nz-icon nzType="left" nzTheme="outline"></i>
-      </button>
+    <div class="sidebar-bottom">
+        <div>
+            <button
+                [routerLink]="['/peek_core_user']"
+                class="sidebar-button"
+                nz-tooltip
+                nzTooltipPlacement="right"
+                nzTooltipTitle="Login / Logout"
+            >
+                <i nz-icon nzTheme="outline" nzType="user"></i>
+            </button>
+        </div>
+        
+        <div>
+            <button
+                [routerLink]="['/config']"
+                class="sidebar-button"
+                nz-tooltip
+                nzTooltipPlacement="right"
+                nzTooltipTitle="Configuration"
+            >
+                <i nz-icon nzTheme="outline" nzType="setting"></i>
+            </button>
+        </div>
+        
+        <div
+            [nzTooltipTitle]="poweredByTemplate"
+            [routerLink]="['/']"
+            nz-tooltip
+            nzTooltipPlacement="rightTop"
+        >
+            <img
+                class="sidebar-powered-by"
+                src="/peek_office_app/src/assets/home-center.png"
+            />
+        </div>
     </div>
-    
-    <div>
-      <button
-        class="sidebar-button"
-        (click)="showSearchClicked()"
-        nzTooltipTitle="Search for Anything"
-        nzTooltipPlacement="right"
-        nz-tooltip
-      >
-        <i nz-icon nzType="search" nzTheme="outline"></i>
-      </button>
-      
-      <plugin-search [(showSearch)]="showSearch"></plugin-search>
-    </div>
-    
-    <div *ngFor="let link of leftLinks$ | async">
-      <button class="sidebar-button" [routerLink]="[link.resourcePath]">
-        {{linkTitle(link)}}
-      </button>
-    </div>
-    
-    <div *ngFor="let link of rightLinks$ | async">
-      <button class="sidebar-button" [routerLink]="[link.resourcePath]">
-        {{linkTitle(link)}}
-      </button>
-    </div>
-    <div>
-      <button
-        class="sidebar-button"
-        *ngFor="let link of rightLinks$ | async"
-        [routerLink]="[link.resourcePath]"
-      >
-        {{linkTitle(link)}}
-      </button>
-    </div>
-    <div class="title h3" *ngIf="!homeLinks.length">
-      No Plugins Installed
-    </div>
-    
-    <div *ngFor="let link of homeLinks">
-      <button
-        class="sidebar-button"
-        [routerLink]="[link.resourcePath]"
-        [nzTooltipTitle]="link.title"
-        nzTooltipPlacement="right"
-        nz-tooltip
-      >
-        <img class="sidebar-button-img" [src]="[link.pluginIconPath]" />
-      </button>
-    </div>
-  </div>
-  
-  <div class="sidebar-bottom">
-    <div>
-      <button
-        class="sidebar-button"
-        [routerLink]="['/peek_core_user']"
-        nzTooltipTitle="Login / Logout"
-        nzTooltipPlacement="right"
-        nz-tooltip
-      >
-        <i nz-icon nzType="user" nzTheme="outline"></i>
-      </button>
-    </div>
-    
-    <div>
-      <button
-        class="sidebar-button"
-        [routerLink]="['/config']"
-        nzTooltipTitle="Configuration"
-        nzTooltipPlacement="right"
-        nz-tooltip
-      >
-        <i nz-icon nzType="setting" nzTheme="outline"></i>
-      </button>
-    </div>
-    
-    <div
-      [routerLink]="['/']"
-      nz-tooltip
-      [nzTooltipTitle]="poweredByTemplate"
-      nzTooltipPlacement="rightTop"
-    >
-      <img class="sidebar-powered-by" src="/peek_office_app/src/assets/home-center.png" />
-    </div>
-  </div>
 </div>
 
 <ng-template #poweredByTemplate>
-  <img class="powered-by-tooltip" src="/peek_office_app/src/assets/home-center.png" />
+    <img
+        class="powered-by-tooltip"
+        src="/peek_office_app/src/assets/home-center.png"
+    />
 </ng-template>

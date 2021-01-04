@@ -42,7 +42,9 @@ $general_margin_4: 32px;
 
 @import '~@synerty/peek-plugin-base-js/src/styles/mixins';
 
-*:focus {outline:none!important;}
+*:focus {
+    outline: none !important;
+}
 
 //peek screens
 @import '~@synerty/peek-plugin-base-js/src/styles/style/_title_bar';
@@ -65,11 +67,11 @@ $general_margin_4: 32px;
 @import "src/variables.scss";
 
 body,
-html{
-  font-size: 14px;
-  color: $font-color-primary;
-  font-family: "Poppins";
-  background: $background-color;
+html {
+    font-size: 14px;
+    color: $font-color-primary;
+    font-family: "Poppins";
+    background: $background-color;
 }
 
 hr {
@@ -77,50 +79,50 @@ hr {
     margin-bottom: unset;
 }
 
-.navigation-information{
-  border-bottom: $general_border solid darken($grey,20%);
-  //margin-bottom: $general_padding;
+.navigation-information {
+    border-bottom: $general_border solid darken($grey, 20%);
+    //margin-bottom: $general_padding;
 }
 
-.form-group{
-  color: $black;
+.form-group {
+    color: $black;
 }
 
 button {
-  -webkit-appearance: button;
-  -webkit-writing-mode: horizontal-tb !important;
-  text-rendering: auto;
-  color: inherit;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-  background-color: inherit;
-  box-sizing: border-box;
-  margin: 0px;
-  font: inherit;
-  padding: 0px;
-  border: none;
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: inherit;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    background-color: inherit;
+    box-sizing: border-box;
+    margin: 0px;
+    font: inherit;
+    padding: 0px;
+    border: none;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url('/assets/Poppins-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Poppins";
+    src: url('/assets/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url('/assets/Poppins-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
+    font-family: "Poppins";
+    src: url('/assets/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url('/assets/Poppins-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
+    font-family: "Poppins";
+    src: url('/assets/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
 }
 
 
