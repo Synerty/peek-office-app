@@ -4,12 +4,10 @@ import {
     FooterService,
     HeaderService,
     IConfigLink,
-    IHeaderLink,
     NavBackService,
     NgLifeCycleEvents
 } from "@synerty/peek-plugin-base-js"
 import { LoggedInGuard } from "@peek/peek_core_user"
-import { map } from "rxjs/operators"
 import { BehaviorSubject } from "rxjs"
 
 @Component({
@@ -26,11 +24,6 @@ export class SidebarComponent extends NgLifeCycleEvents {
     title$ = new BehaviorSubject<string>("Peek")
     statusText$ = new BehaviorSubject<string>("")
     isEnabled$ = new BehaviorSubject<boolean>(true)
-    leftLinks$ = this.headerService.links$.pipe(map(
-        links => links.filter(link => !!link.left))
-    )
-    rightLinks$ = this.headerService.links$.pipe(map(
-        links => links.filter(link => !link.left)))
     
     constructor(
         private footerService: FooterService,
@@ -94,19 +87,6 @@ export class SidebarComponent extends NgLifeCycleEvents {
     
     isBackButtonEnabled(): boolean {
         return this.navBackService.navBackLen() != 0
-    }
-    
-    linkTitle(title: IHeaderLink) {
-        if (title.badgeCount == null) {
-            return title.text
-        }
-        
-        if (title.left) {
-            return `${title.text} (${title.badgeCount})`
-        }
-        
-        return `(${title.badgeCount}) ${title.text}`
-        
     }
     
     showSearchClicked(): void {
