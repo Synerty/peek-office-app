@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core"
 import { DeviceStatusService } from "@peek/peek_core_device"
 import { UserService } from "@peek/peek_core_user"
-import { NgLifeCycleEvents } from "@synerty/peek-plugin-base-js"
+import { NgLifeCycleEvents } from "@synerty/vortexjs"
 
 @Component({
     selector: "app-component",

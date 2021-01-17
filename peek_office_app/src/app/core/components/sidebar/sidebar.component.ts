@@ -5,8 +5,8 @@ import {
     HeaderService,
     IConfigLink,
     NavBackService,
-    NgLifeCycleEvents
 } from "@synerty/peek-plugin-base-js"
+import { NgLifeCycleEvents } from "@synerty/vortexjs"
 import { LoggedInGuard } from "@peek/peek_core_user"
 import { BehaviorSubject } from "rxjs"
 

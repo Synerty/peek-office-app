@@ -1,10 +1,10 @@
-import { BalloonMsgService } from "@synerty/peek-plugin-base-js"
-import { VortexService, VortexStatusService } from "@synerty/vortexjs"
 import {
+    BalloonMsgService,
     FooterService,
-    NavBackService,
-    HeaderService
+    HeaderService,
+    NavBackService
 } from "@synerty/peek-plugin-base-js"
+import { VortexService, VortexStatusService } from "@synerty/vortexjs"
 import { titleBarLinks } from "@_peek/plugin-title-bar-links"
 
 export function headerServiceFactory() {

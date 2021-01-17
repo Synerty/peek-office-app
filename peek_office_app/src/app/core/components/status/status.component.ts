@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core"
-import { HeaderService, NgLifeCycleEvents, } from "@synerty/peek-plugin-base-js"
-import { VortexStatusService } from "@synerty/vortexjs"
+import { HeaderService } from "@synerty/peek-plugin-base-js"
+import { VortexStatusService, NgLifeCycleEvents } from "@synerty/vortexjs"
 import { BehaviorSubject } from "rxjs"
 import { Plugins } from "@capacitor/core"
 
