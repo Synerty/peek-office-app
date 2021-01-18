@@ -31,7 +31,7 @@
                             "node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
                             "node_modules/@synerty/peek-plugin-base-js/src/styles/layout.scss",
                             "src/styles.scss",
-                            "src/_variables.scss"
+                            "src/_shared.scss"
                         ],
                         "scripts": [
                             "node_modules/jquery/dist/jquery.slim.js",
