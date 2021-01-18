@@ -29,7 +29,7 @@
                 <i nz-icon nzTheme="outline" nzType="search"></i>
             </button>
             
-            <plugin-search [(showSearch)]="showSearch"></plugin-search>
+            <core-search-component [(showSearch)]="showSearch"></core-search-component>
         </div>
         
         <div *ngFor="let link of headerService.links$ | async">
