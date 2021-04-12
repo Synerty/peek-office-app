@@ -22,6 +22,7 @@
         "@angular/platform-browser": "^10.2.0",
         "@angular/platform-browser-dynamic": "^10.2.0",
         "@angular/router": "^10.2.0",
+        "@capacitor-community/background-geolocation": "^0.3.11",
         "@capacitor/cli": "^2.4.3",
         "@capacitor/core": "^2.4.3",
         "@synerty/peek-plugin-base-js": "^10.4.0",
