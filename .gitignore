@@ -4,6 +4,7 @@
 .lastHash
 @_peek/
 @peek/
+/peek_office_app/src/assets/
 
 # Ignore python compiled files
 *.pyc
