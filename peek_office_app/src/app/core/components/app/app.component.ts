@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core"
+import { Component } from "@angular/core"
 import { DeviceStatusService } from "@peek/peek_core_device"
 import { UserService } from "@peek/peek_core_user"
 import { BalloonMsgService } from "@synerty/peek-plugin-base-js"
@@ -9,10 +9,8 @@ import { takeUntil } from "rxjs/operators"
     selector: "app-component",
     templateUrl: "app.component.html",
     styleUrls: ["app.component.scss"],
-    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent extends NgLifeCycleEvents {
-    
     loggedIn = false
     
     constructor(
@@ -30,11 +28,11 @@ export class AppComponent extends NgLifeCycleEvents {
         
         vortexStatusService.errors
             .pipe(takeUntil(this.onDestroyEvent))
-            .subscribe((msg:string) => balloonMsg.showError(msg))
-    
+            .subscribe((msg: string) => balloonMsg.showError(msg))
+        
         vortexStatusService.warning
             .pipe(takeUntil(this.onDestroyEvent))
-            .subscribe((msg:string) => balloonMsg.showWarning(msg))
+            .subscribe((msg: string) => balloonMsg.showWarning(msg))
     }
     
     showLoading(): boolean {
