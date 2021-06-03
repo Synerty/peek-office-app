@@ -26,12 +26,12 @@
                             }
                         ],
                         "styles": [
-                            "src/theme.less",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
                             "node_modules/@synerty/peek-plugin-base-js/src/styles/layout.scss",
                             "src/styles.scss",
-                            "src/_shared.scss"
+                            "src/styles/theme.less",
+                            "src/styles/shared.scss"
                         ],
                         "scripts": [
                             "node_modules/jquery/dist/jquery.slim.js",
@@ -91,13 +91,10 @@
                         "styles": [
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
-                            "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/brands.scss",
-                            "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/fontawesome.scss",
-                            "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/solid.scss",
-                            "node_modules/@synerty/font-awesome/fontawesome-free-5.7.2-web/scss/v4-shims.scss",
                             "node_modules/@synerty/peek-plugin-base-js/src/styles/layout.scss",
-                            "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-                            "src/styles.scss"
+                            "src/styles.scss",
+                            "src/styles/theme.less",
+                            "src/styles/shared.scss"
                         ],
                         "assets": [
                             "src/assets",
