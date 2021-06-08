@@ -26,11 +26,11 @@
                             }
                         ],
                         "styles": [
+                            "src/styles/theme.less",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
                             "node_modules/@synerty/peek-plugin-base-js/src/styles/layout.scss",
                             "src/styles.scss",
-                            "src/styles/theme.less",
                             "src/styles/shared.scss"
                         ],
                         "scripts": [
@@ -89,11 +89,11 @@
                             "node_modules/moment/moment.js"
                         ],
                         "styles": [
+                            "src/styles/theme.less",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
                             "node_modules/bootstrap/dist/css/bootstrap-theme.min.css",
                             "node_modules/@synerty/peek-plugin-base-js/src/styles/layout.scss",
                             "src/styles.scss",
-                            "src/styles/theme.less",
                             "src/styles/shared.scss"
                         ],
                         "assets": [
