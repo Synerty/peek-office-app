@@ -29,7 +29,6 @@ build/
 /bower_components
 
 # IDEs and editors
-.idea
 /.vscode
 .project
 .classpath
@@ -53,7 +52,6 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
-.idea
 
 MANIFEST
 
