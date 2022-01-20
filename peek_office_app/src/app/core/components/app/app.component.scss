@@ -1,4 +1,4 @@
-@import '~@synerty/peek-plugin-base-js/src/styles/variables';
+@import "~@synerty/peek-plugin-base-js/src/styles/variables";
 
 .peek-office-app-row {
     display: flex;
@@ -21,7 +21,6 @@
 }
 
 .peek-office-app-sidebar-inner {
-
     overflow-y: auto;
 
     /* Make sure the inner div is not larger than the container

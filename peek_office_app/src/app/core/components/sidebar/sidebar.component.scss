@@ -1,5 +1,4 @@
-@import '@synerty/peek-plugin-base-js/src/styles/variables';
-
+@import "@synerty/peek-plugin-base-js/src/styles/variables";
 
 .peek-ds-main-header {
     width: $desktop_side_bar_width / 2;
@@ -16,7 +15,7 @@
     background-color: $brand;
     width: $desktop_side_bar_width / 2;
     height: $desktop_side_bar_width / 2;
-    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .sidebar-button-img {
@@ -26,7 +25,6 @@
     max-width: 30px;
     max-height: 30px;
 }
-
 
 .peek-ds-mh-title {
     max-width: $desktop_side_bar_width / 2;
@@ -53,7 +51,7 @@
 }
 
 .sidebar-bottom {
-    border-top: 1px solid rgba(255, 255, 255, .2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     align-self: flex-end;
 }
 

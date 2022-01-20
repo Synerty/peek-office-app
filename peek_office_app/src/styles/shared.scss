@@ -1,5 +1,5 @@
-@import 'src/variables';
-@import 'src/components';
+@import "src/variables";
+@import "src/components";
 
 .page-cards {
     padding: 0 20px 20px 20px;
@@ -130,8 +130,8 @@
         }
 
         @for $i from 1 through 20 {
-            .table-column:first-child:nth-last-child( #{$i} ),
-            .table-column:first-child:nth-last-child( #{$i} ) ~ .table-column {
+            .table-column:first-child:nth-last-child(#{$i}),
+            .table-column:first-child:nth-last-child(#{$i}) ~ .table-column {
                 width: calc(100% / #{$i} - (16px / #{$i}));
             }
         }
@@ -169,7 +169,7 @@
         right: 0;
         bottom: 0;
         z-index: 10;
-        background: rgba(0, 0, 0, .5);
+        background: rgba(0, 0, 0, 0.5);
     }
 
     .page-modal-card {

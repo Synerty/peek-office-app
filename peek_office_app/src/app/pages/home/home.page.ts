@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core"
-import { HeaderService, NavBackService } from "@synerty/peek-plugin-base-js"
-import { NgLifeCycleEvents } from "@synerty/vortexjs"
+import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { HeaderService, NavBackService } from "@synerty/peek-plugin-base-js";
+import { NgLifeCycleEvents } from "@synerty/vortexjs";
 
 @Component({
     selector: "home-page",
@@ -9,13 +9,11 @@ import { NgLifeCycleEvents } from "@synerty/vortexjs"
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePage extends NgLifeCycleEvents {
-    
     constructor(
         headerService: HeaderService,
         public navBackService: NavBackService
     ) {
-        super()
-        headerService.setTitle("Peek Home")
+        super();
+        headerService.setTitle("Peek Home");
     }
 }
-

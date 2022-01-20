@@ -1,15 +1,14 @@
-import { AppWebPage } from "./app.po"
+import { AppWebPage } from "./app.po";
 
 describe("build-web App", () => {
-    let page: AppWebPage
-    
+    let page: AppWebPage;
+
     beforeEach(() => {
-        page = new AppWebPage()
-    })
-    
+        page = new AppWebPage();
+    });
+
     it("should display message saying app works", () => {
-        page.navigateTo()
-        expect(page.getParagraphText())
-            .toEqual("app works!")
-    })
-})
+        page.navigateTo();
+        expect(page.getParagraphText()).toEqual("app works!");
+    });
+});

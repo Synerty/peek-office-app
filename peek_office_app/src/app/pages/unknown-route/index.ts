@@ -1,1 +1,1 @@
-export { UnknownRoutePage } from "./unknown-route.page"
+export { UnknownRoutePage } from "./unknown-route.page";

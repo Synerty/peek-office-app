@@ -4,8 +4,8 @@
 //@import '~bootstrap/dist/css/bootstrap-theme.min';
 //@import '~@synerty/peek-plugin-base-js/src/styles/layout';
 
-@import '~@synerty/peek-plugin-base-js/src/styles/ant_design';
-@import '~@synerty/peek-plugin-base-js/src/styles/variables';
+@import "~@synerty/peek-plugin-base-js/src/styles/ant_design";
+@import "~@synerty/peek-plugin-base-js/src/styles/variables";
 
 //sizes
 $general_border: 1.3px;
@@ -40,29 +40,29 @@ $general_margin_2: 10px;
 $general_margin_3: 16px;
 $general_margin_4: 32px;
 
-@import '~@synerty/peek-plugin-base-js/src/styles/mixins';
+@import "~@synerty/peek-plugin-base-js/src/styles/mixins";
 
 *:focus {
     outline: none !important;
 }
 
 //peek screens
-@import '~@synerty/peek-plugin-base-js/src/styles/style/_title_bar';
-@import '~@synerty/peek-plugin-base-js/src/styles/style/_home_screen';
+@import "~@synerty/peek-plugin-base-js/src/styles/style/_title_bar";
+@import "~@synerty/peek-plugin-base-js/src/styles/style/_home_screen";
 
 //plugin screens
-@import '~@synerty/peek-plugin-base-js/src/styles/style/_plugin_inbox';
-@import '~@synerty/peek-plugin-base-js/src/styles/style/_plugin_chat';
+@import "~@synerty/peek-plugin-base-js/src/styles/style/_plugin_inbox";
+@import "~@synerty/peek-plugin-base-js/src/styles/style/_plugin_chat";
 
 //generic sections
-@import '~@synerty/peek-plugin-base-js/src/styles/style/_navigation_section';
-@import '~@synerty/peek-plugin-base-js/src/styles/style/_tabs_section';
-@import '~@synerty/peek-plugin-base-js/src/styles/style/_mobile_dialog_section';
-@import '~@synerty/peek-plugin-base-js/src/styles/style/_information_section';
-@import '~@synerty/peek-plugin-base-js/src/styles/style/_details_section';
-@import '~@synerty/peek-plugin-base-js/src/styles/style/_tables_section';
+@import "~@synerty/peek-plugin-base-js/src/styles/style/_navigation_section";
+@import "~@synerty/peek-plugin-base-js/src/styles/style/_tabs_section";
+@import "~@synerty/peek-plugin-base-js/src/styles/style/_mobile_dialog_section";
+@import "~@synerty/peek-plugin-base-js/src/styles/style/_information_section";
+@import "~@synerty/peek-plugin-base-js/src/styles/style/_details_section";
+@import "~@synerty/peek-plugin-base-js/src/styles/style/_tables_section";
 
-@import '~@synerty/peek-plugin-base-js/src/styles/style/_general';
+@import "~@synerty/peek-plugin-base-js/src/styles/style/_general";
 
 @import "src/variables.scss";
 
@@ -106,30 +106,28 @@ button {
 
 @font-face {
     font-family: "Poppins";
-    src: url('/assets/Poppins-Regular.ttf') format('truetype');
+    src: url("/assets/Poppins-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url('/assets/Poppins-Medium.ttf') format('truetype');
+    src: url("/assets/Poppins-Medium.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url('/assets/Poppins-Medium.ttf') format('truetype');
+    src: url("/assets/Poppins-Medium.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Poppins";
-    src: url('/assets/Poppins-Medium.ttf') format('truetype');
+    src: url("/assets/Poppins-Medium.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
 }
-
-

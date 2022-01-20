@@ -40,7 +40,7 @@
 // import 'web-animations-js';  // Run `npm install --save web-animations-js`.
 
 /** Evergreen browsers require these. **/
-(window as any).global = window
+(window as any).global = window;
 
 /** ALL Firefox browsers require the following to support `@angular/animation`. **/
 // import 'web-animations-js';  // Run `npm install --save web-animations-js`.
@@ -48,17 +48,16 @@
 /***************************************************************************************************
  * Zone JS is required by Angular itself.
  */
-import "zone.js/dist/zone"  // Included with Angular CLI.
-
-import "rxjs/add/observable/zip"
-import "rxjs/add/observable/interval"
-import "rxjs/add/operator/map"
-import "rxjs/add/operator/zip"
-import "rxjs/add/operator/filter"
-import "rxjs/add/operator/takeUntil"
-import "rxjs/add/operator/first"
-import "rxjs/add/operator/toPromise"
-import "rxjs/add/operator/debounce"
+import "zone.js/dist/zone"; // Included with Angular CLI.
+import "rxjs/add/observable/zip";
+import "rxjs/add/observable/interval";
+import "rxjs/add/operator/map";
+import "rxjs/add/operator/zip";
+import "rxjs/add/operator/filter";
+import "rxjs/add/operator/takeUntil";
+import "rxjs/add/operator/first";
+import "rxjs/add/operator/toPromise";
+import "rxjs/add/operator/debounce";
 
 /***************************************************************************************************
  * APPLICATION IMPORTS

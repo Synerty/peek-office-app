@@ -1,9 +1,8 @@
-@import '~@synerty/peek-plugin-base-js/src/styles/_variables';
-
+@import "~@synerty/peek-plugin-base-js/src/styles/_variables";
 
 .peek-dc-home-background {
     height: 100%;
-    background-image: url('/assets/home-background.png');
+    background-image: url("/assets/home-background.png");
     background-size: cover;
     background-color: $black;
 }

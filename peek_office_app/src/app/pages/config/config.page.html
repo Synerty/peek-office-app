@@ -17,12 +17,11 @@
             <div class="header-title">Config Options</div>
         </div>
         <a
-            *ngFor="let link of configLinks" [routerLink]="[link.resourcePath]"
+            *ngFor="let link of configLinks"
+            [routerLink]="[link.resourcePath]"
             class="card-row"
         >
-            <div class="value">
-                {{link.title}} Plugin
-            </div>
+            <div class="value">{{link.title}} Plugin</div>
             <div class="end-value">
                 <i nz-icon nzTheme="outline" nzType="right"></i>
             </div>

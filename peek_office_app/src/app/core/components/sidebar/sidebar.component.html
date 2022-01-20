@@ -1,9 +1,9 @@
 <div *ngIf="isEnabled$ | async" class="peek-ds-main-header">
     <div class="sidebar-top">
         <div class="peek-ds-mh-title">
-            {{title$ | async}}
+            {{ title$ | async }}
         </div>
-        
+
         <div>
             <button
                 (click)="navBackService.navBack()"
@@ -17,7 +17,7 @@
                 <i nz-icon nzTheme="outline" nzType="left"></i>
             </button>
         </div>
-        
+
         <div>
             <button
                 (click)="showSearchClicked()"
@@ -28,32 +28,32 @@
             >
                 <i nz-icon nzTheme="outline" nzType="search"></i>
             </button>
-            
-            <core-search-component [(showSearch)]="showSearch"></core-search-component>
+
+            <core-search-component
+                [(showSearch)]="showSearch"
+            ></core-search-component>
         </div>
-        
+
         <div *ngFor="let link of headerService.links$ | async">
             <button [routerLink]="[link.resourcePath]" class="sidebar-button">
-                <nz-badge
-                    [nzCount]="link.badgeCount"
-                >
+                <nz-badge [nzCount]="link.badgeCount">
                     <i
                         class="count"
                         nz-icon
                         nzTheme="outline"
-                        nzType="{{link.antIcon || 'question-circle'}}"
+                        nzType="{{ link.antIcon || 'question-circle' }}"
                     ></i>
                 </nz-badge>
             </button>
         </div>
-        
+
         <div
             *ngIf="!homeLinks.length && !(headerService.links$ | async)?.length"
             class="title h3"
         >
             No Plugins Installed
         </div>
-        
+
         <div *ngFor="let link of homeLinks">
             <button
                 [nzTooltipTitle]="link.title"
@@ -66,7 +66,7 @@
             </button>
         </div>
     </div>
-    
+
     <div class="sidebar-bottom">
         <div>
             <button
@@ -79,7 +79,7 @@
                 <i nz-icon nzTheme="outline" nzType="user"></i>
             </button>
         </div>
-        
+
         <div>
             <button
                 [routerLink]="['/config']"
@@ -91,8 +91,7 @@
                 <i nz-icon nzTheme="outline" nzType="setting"></i>
             </button>
         </div>
-    
-        
+
         <div
             [nzTooltipTitle]="poweredByTemplate"
             [routerLink]="['/']"
@@ -100,17 +99,11 @@
             [nzTooltipMouseEnterDelay]="1.0"
             nzTooltipPlacement="rightTop"
         >
-            <img
-                class="sidebar-powered-by"
-                src="/assets/home-center.png"
-            />
+            <img class="sidebar-powered-by" src="/assets/home-center.png" />
         </div>
     </div>
 </div>
 
 <ng-template #poweredByTemplate>
-    <img
-        class="powered-by-tooltip"
-        src="/assets/home-center.png"
-    />
+    <img class="powered-by-tooltip" src="/assets/home-center.png" />
 </ng-template>

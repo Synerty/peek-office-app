@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core"
-import { HeaderService } from "@synerty/peek-plugin-base-js"
+import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { HeaderService } from "@synerty/peek-plugin-base-js";
 
 @Component({
     selector: "unknown-route-page",
@@ -9,7 +9,7 @@ import { HeaderService } from "@synerty/peek-plugin-base-js"
 })
 export class UnknownRoutePage {
     constructor(public headerService: HeaderService) {
-        headerService.setTitle("Unknown Route")
-        this.headerService.isEnabled = true
+        headerService.setTitle("Unknown Route");
+        this.headerService.isEnabled = true;
     }
 }
