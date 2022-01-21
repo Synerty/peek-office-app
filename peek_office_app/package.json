@@ -35,7 +35,6 @@
         "ng-zorro-antd": "^10.0.2",
         "promise-worker": "^1.1.1",
         "rxjs": "~6.5.3",
-        "rxjs-compat": "^6.5.2",
         "ts-md5": "^1.2.4",
         "zone.js": "~0.10.3"
     },
