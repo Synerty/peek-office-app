@@ -1,3 +1,5 @@
+import { BehaviorSubject } from "rxjs";
+import { takeUntil } from "rxjs/operators";
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { homeLinks } from "@_peek/plugin-home-links";
 import {
@@ -8,7 +10,6 @@ import {
 } from "@synerty/peek-plugin-base-js";
 import { NgLifeCycleEvents } from "@synerty/vortexjs";
 import { LoggedInGuard } from "@peek/peek_core_user";
-import { BehaviorSubject } from "rxjs";
 
 @Component({
     selector: "sidebar-component",
@@ -34,21 +35,21 @@ export class SidebarComponent extends NgLifeCycleEvents {
         super();
 
         this.headerService.title$
-            .takeUntil(this.onDestroyEvent)
+            .pipe(takeUntil(this.onDestroyEvent))
             .subscribe((v) => (this.title = v));
 
         this.headerService.isEnabled$
-            .takeUntil(this.onDestroyEvent)
+            .pipe(takeUntil(this.onDestroyEvent))
             .subscribe((v) => (this.isEnabled = v));
 
         this.footerService.statusText
-            .takeUntil(this.onDestroyEvent)
+            .pipe(takeUntil(this.onDestroyEvent))
             .subscribe((v) => (this.statusText = v));
 
         this.configLinks = footerService.configLinksSnapshot;
 
         this.footerService.configLinks
-            .takeUntil(this.onDestroyEvent)
+            .pipe(takeUntil(this.onDestroyEvent))
             .subscribe((v) => (this.configLinks = v));
     }
 

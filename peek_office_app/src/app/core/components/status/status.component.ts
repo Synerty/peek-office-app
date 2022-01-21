@@ -1,7 +1,8 @@
+import { BehaviorSubject } from "rxjs";
+import { takeUntil } from "rxjs/operators";
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { HeaderService } from "@synerty/peek-plugin-base-js";
 import { NgLifeCycleEvents, VortexStatusService } from "@synerty/vortexjs";
-import { BehaviorSubject } from "rxjs";
 import { Plugins } from "@capacitor/core";
 
 const { Network } = Plugins;
@@ -46,7 +47,7 @@ export class StatusComponent extends NgLifeCycleEvents {
             this.isOnline = status.connected;
         });
         this.vortexStatusService.isOnline
-            .takeUntil(this.onDestroyEvent)
+            .pipe(takeUntil(this.onDestroyEvent))
             .subscribe((value) => (this.isVortexOnline = value));
     }
 }

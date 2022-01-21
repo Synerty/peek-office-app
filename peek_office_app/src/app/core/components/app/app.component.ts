@@ -23,7 +23,7 @@ export class AppComponent extends NgLifeCycleEvents {
 
         this.loggedIn = this.userService.loggedIn;
         this.userService.loggedInStatus
-            .takeUntil(this.onDestroyEvent)
+            .pipe(takeUntil(this.onDestroyEvent))
             .subscribe((v) => (this.loggedIn = v));
 
         vortexStatusService.errors
