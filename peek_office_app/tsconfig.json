@@ -10,7 +10,7 @@
         "moduleResolution": "node",
         "experimentalDecorators": true,
         "target": "es2015",
-        "lib": ["es2016", "dom"],
+        "lib": ["es2017", "dom"],
         "module": "es2020"
     }
 }
