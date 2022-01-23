@@ -3,6 +3,18 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/peek_office_app.egg-info" />
+      <excludeFolder url="file://$MODULE_DIR$/peek_office_app/src/@_peek" />
+      <excludeFolder url="file://$MODULE_DIR$/peek_office_app/src/@peek" />
+      <excludeFolder url="file://$MODULE_DIR$/peek_office_app/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/peek_office_app/src/assets/peek_plugin_branch" />
+      <excludeFolder url="file://$MODULE_DIR$/peek_office_app/src/assets/peek_plugin_diagram" />
+      <excludeFolder url="file://$MODULE_DIR$/peek_office_app/src/assets/peek_plugin_enmac_diagram" />
+      <excludeFolder url="file://$MODULE_DIR$/peek_office_app/src/assets/peek_plugin_enmac_field_assessments" />
+      <excludeFolder url="file://$MODULE_DIR$/peek_office_app/src/assets/peek_plugin_enmac_field_incidents" />
+      <excludeFolder url="file://$MODULE_DIR$/peek_office_app/src/assets/peek_plugin_enmac_switching" />
+      <excludeFolder url="file://$MODULE_DIR$/peek_office_app/src/assets/peek_plugin_eventdb" />
+      <excludeFolder url="file://$MODULE_DIR$/peek_office_app/src/assets/peek_plugin_gis_diagram" />
+      <excludeFolder url="file://$MODULE_DIR$/peek_office_app/src/assets/peek_plugin_graphdb" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
