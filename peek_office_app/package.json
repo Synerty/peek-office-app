@@ -22,6 +22,7 @@
         "@angular/platform-browser": "^10.2.0",
         "@angular/platform-browser-dynamic": "^10.2.0",
         "@angular/router": "^10.2.0",
+        "@awesome-cordova-plugins/core": "^5.39.1",
         "@awesome-cordova-plugins/native-audio": "^5.39.1",
         "@capacitor-community/background-geolocation": "^0.3.11",
         "@capacitor/cli": "^2.4.3",
