@@ -66,9 +66,9 @@
     .table-columns {
         display: flex;
         max-width: 100%;
-        white-space: nowrap;
+        white-space: normal;
         overflow: hidden;
-        text-overflow: ellipsis;
+        text-overflow: unset;
 
         .table-column {
             flex: 1;
@@ -82,9 +82,9 @@
                 .cell {
                     display: flex;
                     align-items: center;
-                    white-space: nowrap;
+                    white-space: normal;
                     overflow: hidden;
-                    text-overflow: ellipsis;
+                    text-overflow: unset;
                     min-width: 50%;
                     flex: 1;
 
@@ -95,9 +95,9 @@
                     > span:last-of-type {
                         margin-left: 8px;
                         flex: 1;
-                        white-space: nowrap;
+                        white-space: normal;
                         overflow: hidden;
-                        text-overflow: ellipsis;
+                        text-overflow: unset;
                     }
                 }
 
