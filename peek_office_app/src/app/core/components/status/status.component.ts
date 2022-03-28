@@ -24,6 +24,7 @@ export class StatusComponent extends NgLifeCycleEvents {
         public headerService: HeaderService
     ) {
         super();
+        this.isVortexOnline =  vortexStatusService.snapshot.isOnline;
     }
 
     get isOnline() {
