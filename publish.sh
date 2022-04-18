@@ -45,7 +45,6 @@ echo "Setting version to $VER"
 VER_FILES="${VER_FILES} setup.py"
 VER_FILES="${VER_FILES} ${PY_PACKAGE}/__init__.py"
 VER_FILES="${VER_FILES} ${PY_PACKAGE}/plugin_package.json"
-VER_FILES="${VER_FILES} ${PY_PACKAGE}/src/app/pages/config/config.page.html"
 
 function updateFileVers() {
     for file in ${VER_FILES}; do
