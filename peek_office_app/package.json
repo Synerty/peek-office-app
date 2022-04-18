@@ -27,7 +27,7 @@
         "@capacitor-community/background-geolocation": "^0.3.11",
         "@capacitor/cli": "^2.4.3",
         "@capacitor/core": "^2.4.3",
-        "@synerty/peek-plugin-base-js": "^10.7.1",
+        "@synerty/peek-plugin-base-js": "^10.7.3",
         "@synerty/vortexjs": "^2.4.6",
         "assert": "^1.5.0",
         "base-64": "^0.1.0",
