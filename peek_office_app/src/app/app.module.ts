@@ -11,8 +11,6 @@ import {
     TupleOfflineStorageNameService,
     TupleStorageFactoryService,
     TupleStorageFactoryServiceWeb,
-    WebSqlBrowserFactoryService,
-    WebSqlFactoryService,
 } from "@synerty/vortexjs";
 import { staticRoutes } from "./app.routes";
 import { peekRootServices } from "./app.services";
@@ -56,10 +54,6 @@ export function tupleOfflineStorageNameServiceFactory() {
     ],
     providers: [
         { provide: NZ_I18N, useValue: en_US },
-        {
-            provide: WebSqlFactoryService,
-            useClass: WebSqlBrowserFactoryService,
-        },
         {
             provide: TupleStorageFactoryService,
             useClass: TupleStorageFactoryServiceWeb,
