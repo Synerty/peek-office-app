@@ -11,6 +11,7 @@ import {
     TupleOfflineStorageNameService,
     TupleStorageFactoryService,
     TupleStorageFactoryServiceWeb,
+    SqlFactoryService,
 } from "@synerty/vortexjs";
 import { staticRoutes } from "./app.routes";
 import { peekRootServices } from "./app.services";
@@ -58,6 +59,7 @@ export function tupleOfflineStorageNameServiceFactory() {
             provide: TupleStorageFactoryService,
             useClass: TupleStorageFactoryServiceWeb,
         },
+        SqlFactoryService,
         TupleActionPushOfflineSingletonService,
         ...peekRootServices,
         ...pluginRootServices,
