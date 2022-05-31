@@ -3,9 +3,7 @@ import { takeUntil } from "rxjs/operators";
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { HeaderService } from "@synerty/peek-plugin-base-js";
 import { NgLifeCycleEvents, VortexStatusService } from "@synerty/vortexjs";
-import { Plugins } from "@capacitor/core";
-
-const { Network } = Plugins;
+import { Network } from "@capacitor/network";
 
 @Component({
     selector: "status-component",
@@ -24,7 +22,7 @@ export class StatusComponent extends NgLifeCycleEvents {
         public headerService: HeaderService
     ) {
         super();
-        this.isVortexOnline =  vortexStatusService.snapshot.isOnline;
+        this.isVortexOnline = vortexStatusService.snapshot.isOnline;
     }
 
     get isOnline() {
